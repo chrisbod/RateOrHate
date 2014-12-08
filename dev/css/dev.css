@@ -1,0 +1,6 @@
+fieldset {
+	outline: 1px dotted silver;
+}
+label {
+	outline: 1px dotted cyan;
+}

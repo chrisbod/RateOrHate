@@ -1,0 +1,237 @@
+<html>
+
+<head>
+	<script src="js/services/itunes.js"></script>
+<script>
+
+	var rssInput = {
+  "feed": {
+    "author": {
+      "name": {
+        "label": "iTunes Store"
+      },
+      "uri": {
+        "label": "http://www.apple.com/uk/itunes/"
+      }
+    },
+    "entry": [{
+      "im:name": {
+        "label": "Blank Space"
+      },
+      "im:image": [
+        {
+          "label": "http://a1476.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.55x55-70.jpg",
+          "attributes": {
+            "height": "55"
+          }
+        },
+        {
+          "label": "http://a198.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.60x60-50.jpg",
+          "attributes": {
+            "height": "60"
+          }
+        },
+        {
+          "label": "http://a453.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.170x170-75.jpg",
+          "attributes": {
+            "height": "170"
+          }
+        }
+      ],
+      "im:collection": {
+        "im:name": {
+          "label": "1989 (Deluxe)"
+        },
+        "link": {
+          "attributes": {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "https://itunes.apple.com/gb/album/1989-deluxe/id907104698?uo=2"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Album",
+              "label": "Album"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Music"
+          }
+        }
+      },
+      "im:price": {
+        "label": "£0.99",
+        "attributes": {
+          "amount": "0.99000",
+          "currency": "GBP"
+        }
+      },
+      "im:contentType": {
+        "im:contentType": {
+          "attributes": {
+            "term": "Track",
+            "label": "Track"
+          }
+        },
+        "attributes": {
+          "term": "Music",
+          "label": "Music"
+        }
+      },
+      "rights": {
+        "label": "℗ 2014 Big Machine Records, LLC"
+      },
+      "title": {
+        "label": "Blank Space - Taylor Swift"
+      },
+      "link": [
+        {
+          "attributes": {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "https://itunes.apple.com/gb/album/blank-space/id907104698?i=907106180&uo=2"
+          }
+        },
+        {
+          "im:duration": {
+            "label": "30000"
+          },
+          "attributes": {
+            "title": "Preview",
+            "rel": "enclosure",
+            "type": "audio/x-m4a",
+            "href": "http://a1826.phobos.apple.com/us/r2000/009/Music5/v4/9b/01/82/9b018221-0c83-2e3b-b612-70b69d9240f0/mzaf_4472060732031922349.plus.aac.p.m4a",
+            "im:assetType": "preview"
+          }
+        }
+      ],
+      "id": {
+        "label": "https://itunes.apple.com/gb/album/blank-space/id907104698?i=907106180&uo=2",
+        "attributes": {
+          "im:id": "907106180"
+        }
+      },
+      "im:artist": {
+        "label": "Taylor Swift",
+        "attributes": {
+          "href": "https://itunes.apple.com/gb/artist/taylor-swift/id159260351?uo=2"
+        }
+      },
+      "category": {
+        "attributes": {
+          "im:id": "14",
+          "term": "Pop",
+          "scheme": "https://itunes.apple.com/gb/genre/music-pop/id14?uo=2",
+          "label": "Pop"
+        }
+      },
+      "im:releaseDate": {
+        "label": "2014-01-01T00:00:00-07:00",
+        "attributes": {
+          "label": "01 January 2014"
+        }
+      }
+    }],
+    "updated": {
+      "label": "2014-12-03T06:25:41-07:00"
+    },
+    "rights": {
+      "label": "Copyright 2008 Apple Inc."
+    },
+    "title": {
+      "label": "iTunes Store: Top Songs"
+    },
+    "icon": {
+      "label": "http://itunes.apple.com/favicon.ico"
+    },
+    "link": [
+      {
+        "attributes": {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=gb&id=25106&popId=1"
+        }
+      },
+      {
+        "attributes": {
+          "rel": "self",
+          "href": "https://itunes.apple.com/gb/rss/topsongs/limit=1/json"
+        }
+      }
+    ],
+    "id": {
+      "label": "https://itunes.apple.com/gb/rss/topsongs/limit=1/json"
+    }
+  }
+};
+
+
+var searchInput = {
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 159260351,
+      "collectionId": 907104698,
+      "trackId": 907106180,
+      "artistName": "Taylor Swift",
+      "collectionName": "1989 (Deluxe)",
+      "trackName": "Blank Space",
+      "collectionCensoredName": "1989 (Deluxe)",
+      "trackCensoredName": "Blank Space",
+      "artistViewUrl": "https://itunes.apple.com/gb/artist/taylor-swift/id159260351?uo=4",
+      "collectionViewUrl": "https://itunes.apple.com/gb/album/blank-space/id907104698?i=907106180&uo=4",
+      "trackViewUrl": "https://itunes.apple.com/gb/album/blank-space/id907104698?i=907106180&uo=4",
+      "previewUrl": "http://a1826.phobos.apple.com/us/r2000/009/Music5/v4/9b/01/82/9b018221-0c83-2e3b-b612-70b69d9240f0/mzaf_4472060732031922349.plus.aac.p.m4a",
+      "artworkUrl30": "http://a1.mzstatic.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.30x30-50.jpg",
+      "artworkUrl60": "http://a3.mzstatic.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.60x60-50.jpg",
+      "artworkUrl100": "http://a2.mzstatic.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.100x100-75.jpg",
+      "collectionPrice": 11.99,
+      "trackPrice": 0.99,
+      "releaseDate": "2014-01-01T08:00:00Z",
+      "collectionExplicitness": "notExplicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 19,
+      "trackNumber": 2,
+      "trackTimeMillis": 231833,
+      "country": "GBR",
+      "currency": "GBP",
+      "primaryGenreName": "Pop"
+    }
+  ]
+}
+
+var output = {
+	"results": [
+		{
+			"name":["Blank Space","Taylor Swift"],
+			"meta" : ["Pop"],
+			"links" : [
+					{
+						"provider": "itunes",
+						"html": "https://itunes.apple.com/gb/album/1989-deluxe/id907104698?uo=2",
+						"image" : "http://a1476.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.55x55-70.jpg",
+						"preview" : "http://a1826.phobos.apple.com/us/r2000/009/Music5/v4/9b/01/82/9b018221-0c83-2e3b-b612-70b69d9240f0/mzaf_4472060732031922349.plus.aac.p.m4a"
+					}
+			]
+		}
+	]
+};
+//https://itunes.apple.com/search?country=gb&media=music&entity=song&term=Taylor+Swift+Blank&limit=1
+/*
+var converter = new ITunesResultsConverter()
+console.log(converter.convertFeed(rssInput))
+console.log(converter.convertSearch(searchInput))*/
+
+new ITunesRequestService().service.request(function () {console.log(arguments[0])},"music","Taylor Swift")
+
+</script>
+</head>
+
+</html>

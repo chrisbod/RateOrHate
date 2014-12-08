@@ -1,0 +1,30 @@
+ {
+	"results": [
+		{
+			"id": "3123123",
+			"name":["Blank Space","Taylor Swift"],
+			"meta" : ["Pop"],
+			"links" : [
+					{
+						"provider": "itunes",
+						"html": "https://itunes.apple.com/gb/album/1989-deluxe/id907104698?uo=2",
+						"image" : "http://a1476.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.55x55-70.jpg",
+						"preview" : "http://a1826.phobos.apple.com/us/r2000/009/Music5/v4/9b/01/82/9b018221-0c83-2e3b-b612-70b69d9240f0/mzaf_4472060732031922349.plus.aac.p.m4a"
+					}
+			]
+		},
+		{
+			"id": "123123122222",
+			"name":["Blank adsasdasdSpace","Taylor Swift"],
+			"meta" : ["Pop"],
+			"links" : [
+					{
+						"provider": "itunes",
+						"html": "https://itunes.apple.com/gb/album/1989-deluxe/id907104698?uo=2",
+						"image" : "http://a1476.phobos.apple.com/us/r30/Music3/v4/d6/c4/fa/d6c4fa34-af7c-362e-10a1-c4881d550370/14UMGIM34830.55x55-70.jpg",
+						"preview" : "http://a1826.phobos.apple.com/us/r2000/009/Music5/v4/9b/01/82/9b018221-0c83-2e3b-b612-70b69d9240f0/mzaf_4472060732031922349.plus.aac.p.m4a"
+					}
+			]
+		}
+	]
+}

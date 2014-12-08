@@ -1,0 +1,13 @@
+ [
+  	{"name":"Music","id":"music","dataProvider":"amazon"},
+  	{"name":"Clothing","id":"clothing"},
+  	{"name":"Games","id":"games"},
+  	{"name":"Apps","id":"apps"},
+  	{"name":"Gadgets","id":"gadgets"},
+  	{"name":"Food","id":"food"},
+  	{"name":"Bars","id":"bars"},
+  	{"name":"Cafes","id":"cafes"},
+  	{"name":"Shops","id":"shops"},
+  	{"name":"Clubs","id":"clubs"}
+
+  ]

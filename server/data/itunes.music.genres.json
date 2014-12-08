@@ -1,0 +1,1446 @@
+{
+    "name": "Music",
+    "id": "34",
+    "subgenres": {
+        "20": {
+            "name": "Alternative",
+            "id": "20",
+            "subgenres": {
+                "1230": {
+                    "name": "Chinese Alt",
+                    "id": "1230"
+                },
+                "1001": {
+                    "name": "College Rock",
+                    "id": "1001"
+                },
+                "100018": {
+                    "name": "EMO",
+                    "id": "100018"
+                },
+                "1002": {
+                    "name": "Goth Rock",
+                    "id": "1002",
+                    "1003": {
+                        "name": "Grunge",
+                        "id": "1003"
+                    },
+                    "100020": {
+                        "name": "Indie Pop",
+                        "id": "100020",
+                        "1004": {
+                            "name": "Indie Rock",
+                            "id": "1004"
+                        },
+                        "1231": {
+                            "name": "Korean Indie",
+                            "id": "1231"
+                        },
+                        "1005": {
+                            "name": "New Wave",
+                            "id": "1005"
+                        },
+                        "100019": {
+                            "name": "Pop Punk",
+                            "id": "100019"
+                        },
+                        "1006": {
+                            "name": "Punk",
+                            "id": "1006"
+                        }
+                    }
+                },
+                "29": {
+                    "name": "Anime",
+                    "id": "29"
+                },
+                "1197": {
+                    "name": "Arabic",
+                    "id": "1197",
+                    "subgenres": {
+                        "1286": {
+                            "name": "Arabic Pop",
+                            "id": "1286"
+                        },
+                        "1287": {
+                            "name": "Islamic",
+                            "id": "1287"
+                        },
+                        "1284": {
+                            "name": "Khaleeji",
+                            "id": "1284"
+                        },
+                        "1285": {
+                            "name": "North African",
+                            "id": "1285"
+                        }
+                    }
+                },
+                "2": {
+                    "name": "Blues",
+                    "id": "2",
+                    "subgenres": {
+                        "1210": {
+                            "name": "Acoustic Blues",
+                            "id": "1210"
+                        },
+                        "1007": {
+                            "name": "Chicago Blues",
+                            "id": "1007"
+                        },
+                        "1009": {
+                            "name": "Classic Blues",
+                            "id": "1009"
+                        },
+                        "1010": {
+                            "name": "Contemporary Blues",
+                            "id": "1010"
+                        },
+                        "1011": {
+                            "name": "Country Blues",
+                            "id": "1011"
+                        },
+                        "1012": {
+                            "name": "Delta Blues",
+                            "id": "1012"
+                        },
+                        "1013": {
+                            "name": "Electric Blues",
+                            "id": "1013"
+                        }
+                    }
+                },
+                "1122": {
+                    "name": "Brazilian",
+                    "id": "1122",
+                    "subgenres": {
+                        "1220": {
+                            "name": "AxÃ©",
+                            "id": "1220"
+                        },
+                        "1229": {
+                            "name": "Baile Funk",
+                            "id": "1229"
+                        },
+                        "1221": {
+                            "name": "Bossa Nova",
+                            "id": "1221"
+                        },
+                        "1222": {
+                            "name": "Choro",
+                            "id": "1222"
+                        },
+                        "1223": {
+                            "name": "ForrÃ³",
+                            "id": "1223"
+                        },
+                        "1224": {
+                            "name": "Frevo",
+                            "id": "1224"
+                        },
+                        "1225": {
+                            "name": "MPB",
+                            "id": "1225"
+                        },
+                        "1226": {
+                            "name": "Pagode",
+                            "id": "1226"
+                        },
+                        "1227": {
+                            "name": "Samba",
+                            "id": "1227"
+                        },
+                        "1228": {
+                            "name": "Sertanejo",
+                            "id": "1228"
+                        }
+                    }
+                },
+                "4": {
+                    "name": "Children's Music",
+                    "id": "4",
+                    "subgenres": {
+                        "1014": {
+                            "name": "Lullabies",
+                            "id": "1014"
+                        },
+                        "1015": {
+                            "name": "Sing-Along",
+                            "id": "1015"
+                        },
+                        "1016": {
+                            "name": "Stories",
+                            "id": "1016"
+                        }
+                    }
+                },
+                "1232": {
+                    "name": "Chinese",
+                    "id": "1232",
+                    "subgenres": {
+                        "1233": {
+                            "name": "Chinese Classical",
+                            "id": "1233"
+                        },
+                        "1234": {
+                            "name": "Chinese Flute",
+                            "id": "1234"
+                        },
+                        "1235": {
+                            "name": "Chinese Opera",
+                            "id": "1235"
+                        },
+                        "1236": {
+                            "name": "Chinese Orchestral",
+                            "id": "1236"
+                        },
+                        "1237": {
+                            "name": "Chinese Regional Folk",
+                            "id": "1237"
+                        },
+                        "1238": {
+                            "name": "Chinese Strings",
+                            "id": "1238"
+                        },
+                        "1239": {
+                            "name": "Taiwanese Folk",
+                            "id": "1239"
+                        },
+                        "1240": {
+                            "name": "Tibetan Native Music",
+                            "id": "1240"
+                        }
+                    }
+                },
+                "22": {
+                    "name": "Christian & Gospel",
+                    "id": "22",
+                    "subgenres": {
+                        "1094": {
+                            "name": "CCM",
+                            "id": "1094"
+                        },
+                        "1095": {
+                            "name": "Christian Metal",
+                            "id": "1095"
+                        },
+                        "1096": {
+                            "name": "Christian Pop",
+                            "id": "1096"
+                        },
+                        "1097": {
+                            "name": "Christian Rap",
+                            "id": "1097"
+                        },
+                        "1098": {
+                            "name": "Christian Rock",
+                            "id": "1098"
+                        },
+                        "1099": {
+                            "name": "Classic Christian",
+                            "id": "1099"
+                        },
+                        "1100": {
+                            "name": "Contemporary Gospel",
+                            "id": "1100"
+                        },
+                        "1101": {
+                            "name": "Gospel",
+                            "id": "1101"
+                        },
+                        "1103": {
+                            "name": "Praise & Worship",
+                            "id": "1103"
+                        },
+                        "1104": {
+                            "name": "Southern Gospel",
+                            "id": "1104"
+                        },
+                        "1105": {
+                            "name": "Traditional Gospel",
+                            "id": "1105"
+                        }
+                    }
+                },
+                "5": {
+                    "name": "Classical",
+                    "id": "5",
+                    "subgenres": {
+                        "100001": {
+                            "name": "Art Song",
+                            "id": "100001"
+                        },
+                        "1017": {
+                            "name": "Avant-Garde",
+                            "id": "1017"
+                        },
+                        "1018": {
+                            "name": "Baroque Era",
+                            "id": "1018"
+                        },
+                        "100002": {
+                            "name": "Brass & Woodwinds",
+                            "id": "100002"
+                        },
+                        "100006": {
+                            "name": "Cantata",
+                            "id": "100006"
+                        },
+                        "100012": {
+                            "name": "Cello",
+                            "id": "100012"
+                        },
+                        "1019": {
+                            "name": "Chamber Music",
+                            "id": "1019"
+                        },
+                        "1020": {
+                            "name": "Chant",
+                            "id": "1020"
+                        },
+                        "1021": {
+                            "name": "Choral",
+                            "id": "1021"
+                        },
+                        "1022": {
+                            "name": "Classical Crossover",
+                            "id": "1022"
+                        },
+                        "1211": {
+                            "name": "High Classical",
+                            "id": "1211"
+                        },
+                        "100004": {
+                            "name": "Contemporary Era",
+                            "id": "100004"
+                        },
+                        "1023": {
+                            "name": "Early Music",
+                            "id": "1023"
+                        },
+                        "100007": {
+                            "name": "Electronic",
+                            "id": "100007"
+                        },
+                        "100009": {
+                            "name": "Guitar",
+                            "id": "100009"
+                        },
+                        "1024": {
+                            "name": "Impressionist",
+                            "id": "1024"
+                        },
+                        "1025": {
+                            "name": "Medieval Era",
+                            "id": "1025"
+                        },
+                        "1026": {
+                            "name": "Minimalism",
+                            "id": "1026"
+                        },
+                        "1027": {
+                            "name": "Modern Era",
+                            "id": "1027"
+                        },
+                        "9": {
+                            "name": "Opera",
+                            "id": "9"
+                        },
+                        "1028": {
+                            "name": "Opera",
+                            "id": "1028"
+                        },
+                        "100005": {
+                            "name": "Oratorio",
+                            "id": "100005"
+                        },
+                        "1029": {
+                            "name": "Orchestral",
+                            "id": "1029"
+                        },
+                        "100013": {
+                            "name": "Percussion",
+                            "id": "100013"
+                        },
+                        "100010": {
+                            "name": "Piano",
+                            "id": "100010"
+                        },
+                        "1030": {
+                            "name": "Renaissance",
+                            "id": "1030"
+                        },
+                        "1031": {
+                            "name": "Romantic Era",
+                            "id": "1031"
+                        },
+                        "100008": {
+                            "name": "Sacred",
+                            "id": "100008"
+                        },
+                        "100003": {
+                            "name": "Solo Instrumental",
+                            "id": "100003"
+                        },
+                        "100011": {
+                            "name": "Violin",
+                            "id": "100011"
+                        },
+                        "1032": {
+                            "name": "Wedding Music",
+                            "id": "1032"
+                        }
+                    }
+                },
+                "3": {
+                    "name": "Comedy",
+                    "id": "3",
+                    "subgenres": {
+                        "1167": {
+                            "name": "Novelty",
+                            "id": "1167"
+                        },
+                        "1171": {
+                            "name": "Standup Comedy",
+                            "id": "1171"
+                        }
+                    }
+                },
+                "6": {
+                    "name": "Country",
+                    "id": "6",
+                    "subgenres": {
+                        "1033": {
+                            "name": "Alternative Country",
+                            "id": "1033"
+                        },
+                        "1034": {
+                            "name": "Americana",
+                            "id": "1034"
+                        },
+                        "1035": {
+                            "name": "Bluegrass",
+                            "id": "1035"
+                        },
+                        "1036": {
+                            "name": "Contemporary Bluegrass",
+                            "id": "1036"
+                        },
+                        "1037": {
+                            "name": "Contemporary Country",
+                            "id": "1037"
+                        },
+                        "1038": {
+                            "name": "Country Gospel",
+                            "id": "1038"
+                        },
+                        "1039": {
+                            "name": "Honky Tonk",
+                            "id": "1039"
+                        },
+                        "1040": {
+                            "name": "Outlaw Country",
+                            "id": "1040"
+                        },
+                        "1294": {
+                            "name": "Thai Country",
+                            "id": "1294"
+                        },
+                        "1041": {
+                            "name": "Traditional Bluegrass",
+                            "id": "1041"
+                        },
+                        "1042": {
+                            "name": "Traditional Country",
+                            "id": "1042"
+                        },
+                        "1043": {
+                            "name": "Urban Cowboy",
+                            "id": "1043"
+                        }
+                    }
+                },
+                "17": {
+                    "name": "Dance",
+                    "id": "17",
+                    "subgenres": {
+                        "1044": {
+                            "name": "Breakbeat",
+                            "id": "1044"
+                        },
+                        "1045": {
+                            "name": "Exercise",
+                            "id": "1045"
+                        },
+                        "1046": {
+                            "name": "Garage",
+                            "id": "1046"
+                        },
+                        "1047": {
+                            "name": "Hardcore",
+                            "id": "1047"
+                        },
+                        "1048": {
+                            "name": "House",
+                            "id": "1048"
+                        },
+                        "1049": {
+                            "name": "Jungle/Drum'n'bass",
+                            "id": "1049"
+                        },
+                        "1050": {
+                            "name": "Techno",
+                            "id": "1050"
+                        },
+                        "1051": {
+                            "name": "Trance",
+                            "id": "1051"
+                        }
+                    }
+                },
+                "50000063": {
+                    "name": "Disney",
+                    "id": "50000063"
+                },
+                "25": {
+                    "name": "Easy Listening",
+                    "id": "25",
+                    "subgenres": {
+                        "1054": {
+                            "name": "Lounge",
+                            "id": "1054"
+                        },
+                        "1055": {
+                            "name": "Swing",
+                            "id": "1055"
+                        }
+                    }
+                },
+                "7": {
+                    "name": "Electronic",
+                    "id": "7",
+                    "subgenres": {
+                        "1056": {
+                            "name": "Ambient",
+                            "id": "1056"
+                        },
+                        "100015": {
+                            "name": "Bass",
+                            "id": "100015"
+                        },
+                        "1057": {
+                            "name": "Downtempo",
+                            "id": "1057"
+                        },
+                        "100014": {
+                            "name": "Dubstep",
+                            "id": "100014"
+                        },
+                        "1058": {
+                            "name": "Electronica",
+                            "id": "1058"
+                        },
+                        "1060": {
+                            "name": "IDM/Experimental",
+                            "id": "1060"
+                        },
+                        "1061": {
+                            "name": "Industrial",
+                            "id": "1061"
+                        }
+                    }
+                },
+                "28": {
+                    "name": "Enka",
+                    "id": "28"
+                },
+                "50": {
+                    "name": "Fitness & Workout",
+                    "id": "50"
+                },
+                "1289": {
+                    "name": "Folk",
+                    "id": "1289"
+                },
+                "50000064": {
+                    "name": "French Pop",
+                    "id": "50000064"
+                },
+                "50000068": {
+                    "name": "German Folk",
+                    "id": "50000068"
+                },
+                "50000066": {
+                    "name": "German Pop",
+                    "id": "50000066"
+                },
+                "18": {
+                    "name": "Hip-Hop/Rap",
+                    "id": "18",
+                    "subgenres": {
+                        "1068": {
+                            "name": "Alternative Rap",
+                            "id": "1068"
+                        },
+                        "1241": {
+                            "name": "Chinese Hip-Hop",
+                            "id": "1241"
+                        },
+                        "1069": {
+                            "name": "Dirty South",
+                            "id": "1069"
+                        },
+                        "1070": {
+                            "name": "East Coast Rap",
+                            "id": "1070"
+                        },
+                        "1071": {
+                            "name": "Gangsta Rap",
+                            "id": "1071"
+                        },
+                        "1072": {
+                            "name": "Hardcore Rap",
+                            "id": "1072"
+                        },
+                        "1073": {
+                            "name": "Hip-Hop",
+                            "id": "1073"
+                        },
+                        "1242": {
+                            "name": "Korean Hip-Hop",
+                            "id": "1242"
+                        },
+                        "1074": {
+                            "name": "Latin Rap",
+                            "id": "1074"
+                        },
+                        "1075": {
+                            "name": "Old School Rap",
+                            "id": "1075"
+                        },
+                        "1076": {
+                            "name": "Rap",
+                            "id": "1076"
+                        },
+                        "100016": {
+                            "name": "UK Hip-Hop",
+                            "id": "100016"
+                        },
+                        "1077": {
+                            "name": "Underground Rap",
+                            "id": "1077"
+                        },
+                        "1078": {
+                            "name": "West Coast Rap",
+                            "id": "1078"
+                        }
+                    }
+                },
+                "8": {
+                    "name": "Holiday",
+                    "id": "8",
+                    "subgenres": {
+                        "1079": {
+                            "name": "Chanukah",
+                            "id": "1079"
+                        },
+                        "1080": {
+                            "name": "Christmas",
+                            "id": "1080"
+                        },
+                        "1081": {
+                            "name": "Christmas: Children's",
+                            "id": "1081"
+                        },
+                        "1082": {
+                            "name": "Christmas: Classic",
+                            "id": "1082"
+                        },
+                        "1083": {
+                            "name": "Christmas: Classical",
+                            "id": "1083"
+                        },
+                        "1084": {
+                            "name": "Christmas: Jazz",
+                            "id": "1084"
+                        },
+                        "1085": {
+                            "name": "Christmas: Modern",
+                            "id": "1085"
+                        },
+                        "1086": {
+                            "name": "Christmas: Pop",
+                            "id": "1086"
+                        },
+                        "1087": {
+                            "name": "Christmas: R&B",
+                            "id": "1087"
+                        },
+                        "1088": {
+                            "name": "Christmas: Religious",
+                            "id": "1088"
+                        },
+                        "1089": {
+                            "name": "Christmas: Rock",
+                            "id": "1089"
+                        },
+                        "1090": {
+                            "name": "Easter",
+                            "id": "1090"
+                        },
+                        "1091": {
+                            "name": "Halloween",
+                            "id": "1091"
+                        },
+                        "1092": {
+                            "name": "Holiday: Other",
+                            "id": "1092"
+                        },
+                        "1093": {
+                            "name": "Thanksgiving",
+                            "id": "1093"
+                        }
+                    }
+                },
+                "1262": {
+                    "name": "Indian",
+                    "id": "1262",
+                    "subgenres": {
+                        "1263": {
+                            "name": "Bollywood",
+                            "id": "1263"
+                        },
+                        "1267": {
+                            "name": "Devotional & Spiritual",
+                            "id": "1267"
+                        },
+                        "1278": {
+                            "name": "Ghazals",
+                            "id": "1278"
+                        },
+                        "1269": {
+                            "name": "Indian Classical",
+                            "id": "1269"
+                        },
+                        "1279": {
+                            "name": "Indian Folk",
+                            "id": "1279"
+                        },
+                        "1185": {
+                            "name": "Indian Pop",
+                            "id": "1185"
+                        },
+                        "1266": {
+                            "name": "Regional Indian",
+                            "id": "1266"
+                        },
+                        "1268": {
+                            "name": "Sufi",
+                            "id": "1268"
+                        },
+                        "1264": {
+                            "name": "Tamil",
+                            "id": "1264"
+                        },
+                        "1265": {
+                            "name": "Telugu",
+                            "id": "1265"
+                        }
+                    }
+                },
+                "100000": {
+                    "name": "Christian & Gospel",
+                    "id": "100000"
+                },
+                "53": {
+                    "name": "Instrumental",
+                    "id": "53"
+                },
+                "27": {
+                    "name": "J-Pop",
+                    "id": "27"
+                },
+                "11": {
+                    "name": "Jazz",
+                    "id": "11",
+                    "subgenres": {
+                        "1106": {
+                            "name": "Avant-Garde Jazz",
+                            "id": "1106"
+                        },
+                        "1053": {
+                            "name": "Bop",
+                            "id": "1053"
+                        },
+                        "1052": {
+                            "name": "Big Band",
+                            "id": "1052"
+                        },
+                        "1107": {
+                            "name": "Contemporary Jazz",
+                            "id": "1107"
+                        },
+                        "1209": {
+                            "name": "Cool",
+                            "id": "1209"
+                        },
+                        "1108": {
+                            "name": "Crossover Jazz",
+                            "id": "1108"
+                        },
+                        "1109": {
+                            "name": "Dixieland",
+                            "id": "1109"
+                        },
+                        "1110": {
+                            "name": "Fusion",
+                            "id": "1110"
+                        },
+                        "1207": {
+                            "name": "Hard Bop",
+                            "id": "1207"
+                        },
+                        "1111": {
+                            "name": "Latin Jazz",
+                            "id": "1111"
+                        },
+                        "1112": {
+                            "name": "Mainstream Jazz",
+                            "id": "1112"
+                        },
+                        "1113": {
+                            "name": "Ragtime",
+                            "id": "1113"
+                        },
+                        "1114": {
+                            "name": "Smooth Jazz",
+                            "id": "1114"
+                        },
+                        "1208": {
+                            "name": "Trad Jazz",
+                            "id": "1208"
+                        },
+                        "1175": {
+                            "name": "Vocal Jazz",
+                            "id": "1175"
+                        }
+                    }
+                },
+                "52": {
+                    "name": "Karaoke",
+                    "id": "52"
+                },
+                "30": {
+                    "name": "Kayokyoku",
+                    "id": "30"
+                },
+                "1243": {
+                    "name": "Korean",
+                    "id": "1243",
+                    "subgenres": {
+                        "1246": {
+                            "name": "Korean Trad Instrumental",
+                            "id": "1246"
+                        },
+                        "1245": {
+                            "name": "Korean Trad Song",
+                            "id": "1245"
+                        },
+                        "1247": {
+                            "name": "Korean Trad Theater",
+                            "id": "1247"
+                        },
+                        "1244": {
+                            "name": "Korean Classical",
+                            "id": "1244"
+                        }
+                    }
+                },
+                "12": {
+                    "name": "Latino",
+                    "id": "12",
+                    "subgenres": {
+                        "1121": {
+                            "name": "Alternativo & Rock Latino",
+                            "id": "1121"
+                        },
+                        "1120": {
+                            "name": "Baladas y Boleros",
+                            "id": "1120"
+                        },
+                        "1116": {
+                            "name": "Contemporary Latin",
+                            "id": "1116"
+                        },
+                        "1115": {
+                            "name": "Latin Jazz",
+                            "id": "1115"
+                        },
+                        "1119": {
+                            "name": "Latin Urban",
+                            "id": "1119"
+                        },
+                        "1117": {
+                            "name": "Pop Latino",
+                            "id": "1117"
+                        },
+                        "1118": {
+                            "name": "RaÃ­ces",
+                            "id": "1118"
+                        },
+                        "1123": {
+                            "name": "Regional Mexicano",
+                            "id": "1123"
+                        },
+                        "1124": {
+                            "name": "Salsa y Tropical",
+                            "id": "1124"
+                        }
+                    }
+                },
+                "1291": {
+                    "name": "Marching",
+                    "id": "1291"
+                },
+                "13": {
+                    "name": "New Age",
+                    "id": "13",
+                    "subgenres": {
+                        "1125": {
+                            "name": "Environmental",
+                            "id": "1125"
+                        },
+                        "1126": {
+                            "name": "Healing",
+                            "id": "1126"
+                        },
+                        "1127": {
+                            "name": "Meditation",
+                            "id": "1127"
+                        },
+                        "1128": {
+                            "name": "Nature",
+                            "id": "1128"
+                        },
+                        "1129": {
+                            "name": "Relaxation",
+                            "id": "1129"
+                        },
+                        "1130": {
+                            "name": "Travel",
+                            "id": "1130"
+                        },
+                        "100021": {
+                            "name": "Yoga",
+                            "id": "100021"
+                        }
+                    }
+                },
+                "1290": {
+                    "name": "Orchestral",
+                    "id": "1290"
+                },
+                "14": {
+                    "name": "Pop",
+                    "id": "14",
+                    "subgenres": {
+                        "1131": {
+                            "name": "Adult Contemporary",
+                            "id": "1131"
+                        },
+                        "1132": {
+                            "name": "Britpop",
+                            "id": "1132"
+                        },
+                        "1250": {
+                            "name": "C-Pop",
+                            "id": "1250"
+                        },
+                        "1251": {
+                            "name": "Cantopop/HK-Pop",
+                            "id": "1251"
+                        },
+                        "1259": {
+                            "name": "Indo Pop",
+                            "id": "1259"
+                        },
+                        "51": {
+                            "name": "K-Pop",
+                            "id": "51"
+                        },
+                        "1252": {
+                            "name": "Korean Folk-Pop",
+                            "id": "1252"
+                        },
+                        "1255": {
+                            "name": "Malaysian Pop",
+                            "id": "1255"
+                        },
+                        "1253": {
+                            "name": "Mandopop",
+                            "id": "1253"
+                        },
+                        "1258": {
+                            "name": "Manilla Sound",
+                            "id": "1258"
+                        },
+                        "1293": {
+                            "name": "Oldies",
+                            "id": "1293"
+                        },
+                        "1257": {
+                            "name": "Original Pilipino Music",
+                            "id": "1257"
+                        },
+                        "1256": {
+                            "name": "Pinoy Pop",
+                            "id": "1256"
+                        },
+                        "1133": {
+                            "name": "Pop/Rock",
+                            "id": "1133"
+                        },
+                        "1134": {
+                            "name": "Soft Rock",
+                            "id": "1134"
+                        },
+                        "1254": {
+                            "name": "Tai-Pop",
+                            "id": "1254"
+                        },
+                        "1135": {
+                            "name": "Teen Pop",
+                            "id": "1135"
+                        },
+                        "1260": {
+                            "name": "Thai Pop",
+                            "id": "1260"
+                        },
+                        "100022": {
+                            "name": "Tribute",
+                            "id": "100022"
+                        }
+                    }
+                },
+                "15": {
+                    "name": "R&B/Soul",
+                    "id": "15",
+                    "subgenres": {
+                        "1136": {
+                            "name": "Contemporary R&B",
+                            "id": "1136"
+                        },
+                        "1137": {
+                            "name": "Disco",
+                            "id": "1137"
+                        },
+                        "1138": {
+                            "name": "Doo Wop",
+                            "id": "1138"
+                        },
+                        "1139": {
+                            "name": "Funk",
+                            "id": "1139"
+                        },
+                        "1140": {
+                            "name": "Motown",
+                            "id": "1140"
+                        },
+                        "1141": {
+                            "name": "Neo-Soul",
+                            "id": "1141"
+                        },
+                        "1142": {
+                            "name": "Quiet Storm",
+                            "id": "1142"
+                        },
+                        "1143": {
+                            "name": "Soul",
+                            "id": "1143"
+                        }
+                    }
+                },
+                "24": {
+                    "name": "Reggae",
+                    "id": "24",
+                    "subgenres": {
+                        "1193": {
+                            "name": "Dub",
+                            "id": "1193"
+                        },
+                        "100017": {
+                            "name": "Lovers Rock",
+                            "id": "100017"
+                        },
+                        "1183": {
+                            "name": "Modern Dancehall",
+                            "id": "1183"
+                        },
+                        "1192": {
+                            "name": "Roots Reggae",
+                            "id": "1192"
+                        },
+                        "1194": {
+                            "name": "Ska",
+                            "id": "1194"
+                        }
+                    }
+                },
+                "21": {
+                    "name": "Rock",
+                    "id": "21",
+                    "subgenres": {
+                        "1144": {
+                            "name": "Adult Alternative",
+                            "id": "1144"
+                        },
+                        "1145": {
+                            "name": "American Trad Rock",
+                            "id": "1145"
+                        },
+                        "1146": {
+                            "name": "Arena Rock",
+                            "id": "1146"
+                        },
+                        "1147": {
+                            "name": "Blues-Rock",
+                            "id": "1147"
+                        },
+                        "1148": {
+                            "name": "British Invasion",
+                            "id": "1148"
+                        },
+                        "1248": {
+                            "name": "Chinese Rock",
+                            "id": "1248"
+                        },
+                        "1149": {
+                            "name": "Death Metal/Black Metal",
+                            "id": "1149"
+                        },
+                        "1150": {
+                            "name": "Glam Rock",
+                            "id": "1150"
+                        },
+                        "1151": {
+                            "name": "Hair Metal",
+                            "id": "1151"
+                        },
+                        "1152": {
+                            "name": "Hard Rock",
+                            "id": "1152"
+                        },
+                        "1153": {
+                            "name": "Metal",
+                            "id": "1153"
+                        },
+                        "1154": {
+                            "name": "Jam Bands",
+                            "id": "1154"
+                        },
+                        "1249": {
+                            "name": "Korean Rock",
+                            "id": "1249"
+                        },
+                        "1155": {
+                            "name": "Prog-Rock/Art Rock",
+                            "id": "1155"
+                        },
+                        "1156": {
+                            "name": "Psychedelic",
+                            "id": "1156"
+                        },
+                        "1157": {
+                            "name": "Rock & Roll",
+                            "id": "1157"
+                        },
+                        "1158": {
+                            "name": "Rockabilly",
+                            "id": "1158"
+                        },
+                        "1159": {
+                            "name": "Roots Rock",
+                            "id": "1159"
+                        },
+                        "1160": {
+                            "name": "Singer/ Songwriter",
+                            "id": "1160"
+                        },
+                        "1161": {
+                            "name": "Southern Rock",
+                            "id": "1161"
+                        },
+                        "1162": {
+                            "name": "Surf",
+                            "id": "1162"
+                        },
+                        "1163": {
+                            "name": "Tex-Mex",
+                            "id": "1163"
+                        }
+                    }
+                },
+                "10": {
+                    "name": "Singer/Songwriter",
+                    "id": "10",
+                    "subgenres": {
+                        "1062": {
+                            "name": "Alternative Folk",
+                            "id": "1062"
+                        },
+                        "1063": {
+                            "name": "Contemporary Folk",
+                            "id": "1063"
+                        },
+                        "1064": {
+                            "name": "Contemporary Singer/Songwriter",
+                            "id": "1064"
+                        },
+                        "1065": {
+                            "name": "Folk-Rock",
+                            "id": "1065"
+                        },
+                        "1066": {
+                            "name": "New Acoustic",
+                            "id": "1066"
+                        },
+                        "1067": {
+                            "name": "Traditional Folk",
+                            "id": "1067"
+                        }
+                    }
+                },
+                "16": {
+                    "name": "Soundtrack",
+                    "id": "16",
+                    "subgenres": {
+                        "1165": {
+                            "name": "Foreign Cinema",
+                            "id": "1165"
+                        },
+                        "1166": {
+                            "name": "Musicals",
+                            "id": "1166"
+                        },
+                        "1168": {
+                            "name": "Original Score",
+                            "id": "1168"
+                        },
+                        "1288": {
+                            "name": "Sound Effects",
+                            "id": "1288"
+                        },
+                        "1169": {
+                            "name": "Soundtrack",
+                            "id": "1169"
+                        },
+                        "1172": {
+                            "name": "TV Soundtrack",
+                            "id": "1172"
+                        }
+                    }
+                },
+                "50000061": {
+                    "name": "Spoken Word",
+                    "id": "50000061"
+                },
+                "23": {
+                    "name": "Vocal",
+                    "id": "23",
+                    "subgenres": {
+                        "1173": {
+                            "name": "Standards",
+                            "id": "1173"
+                        },
+                        "1174": {
+                            "name": "Traditional Pop",
+                            "id": "1174"
+                        },
+                        "1261": {
+                            "name": "Trot",
+                            "id": "1261"
+                        },
+                        "1176": {
+                            "name": "Vocal Pop",
+                            "id": "1176"
+                        }
+                    }
+                },
+                "19": {
+                    "name": "World",
+                    "id": "19",
+                    "subgenres": {
+                        "1203": {
+                            "name": "Africa",
+                            "id": "1203"
+                        },
+                        "1281": {
+                            "name": "Afrikaans",
+                            "id": "1281"
+                        },
+                        "1177": {
+                            "name": "Afro-Beat",
+                            "id": "1177"
+                        },
+                        "1178": {
+                            "name": "Afro-Pop",
+                            "id": "1178"
+                        },
+                        "1280": {
+                            "name": "Arabesque",
+                            "id": "1280"
+                        },
+                        "1204": {
+                            "name": "Asia",
+                            "id": "1204"
+                        },
+                        "1200": {
+                            "name": "Australia",
+                            "id": "1200"
+                        },
+                        "1179": {
+                            "name": "Cajun",
+                            "id": "1179"
+                        },
+                        "1276": {
+                            "name": "Calypso",
+                            "id": "1276"
+                        },
+                        "1195": {
+                            "name": "Caribbean",
+                            "id": "1195"
+                        },
+                        "1180": {
+                            "name": "Celtic",
+                            "id": "1180"
+                        },
+                        "1181": {
+                            "name": "Celtic Folk",
+                            "id": "1181"
+                        },
+                        "1182": {
+                            "name": "Contemporary Celtic",
+                            "id": "1182"
+                        },
+                        "1274": {
+                            "name": "Dangdut",
+                            "id": "1274"
+                        },
+                        "1271": {
+                            "name": "Dini",
+                            "id": "1271"
+                        },
+                        "1184": {
+                            "name": "Drinking Songs",
+                            "id": "1184"
+                        },
+                        "1205": {
+                            "name": "Europe",
+                            "id": "1205"
+                        },
+                        "1297": {
+                            "name": "Fado",
+                            "id": "1297"
+                        },
+                        "1282": {
+                            "name": "Farsi",
+                            "id": "1282"
+                        },
+                        "1295": {
+                            "name": "Flamenco",
+                            "id": "1295"
+                        },
+                        "1202": {
+                            "name": "France",
+                            "id": "1202"
+                        },
+                        "1272": {
+                            "name": "Halk",
+                            "id": "1272"
+                        },
+                        "1199": {
+                            "name": "Hawaii",
+                            "id": "1199"
+                        },
+                        "1298": {
+                            "name": "Iberia",
+                            "id": "1298"
+                        },
+                        "1275": {
+                            "name": "Indonesian Religious",
+                            "id": "1275"
+                        },
+                        "1283": {
+                            "name": "Israeli",
+                            "id": "1283"
+                        },
+                        "1201": {
+                            "name": "Japan",
+                            "id": "1201"
+                        },
+                        "1186": {
+                            "name": "Japanese Pop",
+                            "id": "1186"
+                        },
+                        "1187": {
+                            "name": "Klezmer",
+                            "id": "1187"
+                        },
+                        "1198": {
+                            "name": "North America",
+                            "id": "1198"
+                        },
+                        "1188": {
+                            "name": "Polka",
+                            "id": "1188"
+                        },
+                        "1299": {
+                            "name": "Russian",
+                            "id": "1299"
+                        },
+                        "1270": {
+                            "name": "Russian Chanson",
+                            "id": "1270"
+                        },
+                        "1273": {
+                            "name": "Sanat",
+                            "id": "1273"
+                        },
+                        "1277": {
+                            "name": "Soca",
+                            "id": "1277"
+                        },
+                        "1206": {
+                            "name": "South Africa",
+                            "id": "1206"
+                        },
+                        "1196": {
+                            "name": "South America",
+                            "id": "1196"
+                        },
+                        "1296": {
+                            "name": "Tango",
+                            "id": "1296"
+                        },
+                        "1189": {
+                            "name": "Traditional Celtic",
+                            "id": "1189"
+                        },
+                        "1300": {
+                            "name": "Turkish",
+                            "id": "1300"
+                        },
+                        "1190": {
+                            "name": "Worldbeat",
+                            "id": "1190"
+                        },
+                        "1191": {
+                            "name": "Zydeco",
+                            "id": "1191"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

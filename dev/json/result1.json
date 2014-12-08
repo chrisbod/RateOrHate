@@ -1,0 +1,10 @@
+{
+	"name": "result 1",
+	"id":"result1",
+	"rateables": ["food","club","bar"],
+	"summary": "This is result 1's summary",
+	"ratings": {
+		"rate": 43,
+		"hate": 23
+	}
+}

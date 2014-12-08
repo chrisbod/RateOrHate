@@ -1,0 +1,52 @@
+{
+	"results": [
+		{
+			"id": [""],
+			"name":["","",""],
+			"summary": "",
+			"meta" : ["",""],
+			"rateables": [""],
+			"categories": [""],
+			"ratings": [0,0],
+			"images": ["",""],
+			"providers" : [
+					{
+						"id": "",
+						"uri": ""
+					}
+			]
+		},
+		{
+			"id": [""],
+			"name":["","",""],
+			"meta" : ["",""],
+			"summary": "",
+			"rateables": [""],
+			"categories": [""],
+			"ratings": [0,0],
+			"images": ["",""],
+			"providers" : [
+					{
+						"id": "",
+						"uri": ""
+					}
+			]
+		},
+		{
+			"id": [""],
+			"name":["","",""],
+			"meta" : ["",""],
+			"summary":"",
+			"rateables": [""],
+			"categories": [""],
+			"ratings": [0,0],
+			"images": ["",""],
+			"providers" : [
+					{
+						"id": "",
+						"uri": ""
+					}
+			]
+		}
+	]
+}

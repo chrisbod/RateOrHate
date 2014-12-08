@@ -1,0 +1,436 @@
+/**
+ *
+ * ROVI THEME
+ *
+ * Check out http://support.mashery.com/public/Mashery/styles/masherycssfw.src.css to see the base structural defaults.
+ * You can find documentation on customizing your portal at http://support.mashery.com/docs/Customizing_Your_Portal
+ * We discourage making major changes to the layout since it has a standard structure to it which is easy for users
+ * to use.
+ *
+ */
+
+    body {
+        background: #671A1E url(/public/Mashery/images/clients/rovi/bgGrad.gif) repeat-x 0 0;
+        color: #423A37;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: 400;
+    }
+    
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        color: #423A37;
+    }
+
+    h1 {
+        color: #D30028;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: #6B5D5A;
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    p {}
+    
+    a {
+        color: blue;
+    }
+    
+    a:link,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    a:hover,
+    a:active {
+        color: #EC9622;
+    }
+    
+    /* All the input fields (text input, textareas, selects) */
+    input.input-text,
+    input.input-password,
+    input[type^=text],
+    textarea,
+    select {}
+    
+    table {}
+    
+    table thead th {}
+    
+    table th a {}
+    
+    table th a:hover {}
+    
+    table td {}
+    
+    table tr.even td {}
+    
+    div#page {
+        
+    }
+    
+    /* Set the overall width */
+    div#page,
+    div#header,
+    div#content,
+    div#local,
+    div#user,
+    div#user-menu,
+    div#footer {
+        width: 960px;
+    }
+    
+    /* For pages without navigation (you can set which pages you do not want to have navigation on, for whatever reason) */
+    div#page.no_local div#main {}
+    
+    div#page.no_local div#sub {}
+    
+    /* For pages without a side column, you can set which pages do or do not have side columns. */
+    div#page.no_sub div#main {
+        width: 920px;
+        background-image: none;
+    }
+
+    /** 
+     * 
+     * HEADER
+     * 
+     * The header is where your logo, login links, search, and user control links should go.
+     *
+     */
+    
+        div#header {
+            height: 93px;
+        }
+
+        /* Here is where you put your logo! Yes, it is the background of a div. This div is special because Javascript makes it behave
+           like a Home link by default, you can change this in the settings if you absolutely must.
+           
+           You must change the width and height of this div to the same size as your logo. */
+
+        div#branding-logo {
+            background: transparent url("/public/Mashery/images/clients/rovi/rovi-small.png") no-repeat 0 0;
+            margin: 30px 0 0 17px;
+            width: 56px;
+            height: 30px;
+        }
+
+    /* END HEADER */
+        
+    /**
+     *
+     * USER
+     *
+     * User information and actions
+     *
+     */
+     
+        div#user {
+/*            position: relative; This causes issues in IE6 */
+        }
+
+        /**
+         *
+         * USER NAV
+         *
+         * Login, logout, register, and My Account links.
+         *
+         */
+         
+            div#user-nav {
+                font-size: 11px;
+                top: 0;
+                margin: -88px 0 0; /* Use top margin to move this around when you can. */
+                color: #ddd;
+            }
+         
+            div#user-nav ul li {}
+            
+            /* The user's name, "Signed in as Wally Wombat" */
+            div#user-nav ul li span.name {}
+            
+            div#user-nav ul li a {
+                color: #A6958E;
+            }
+            
+            div#user-nav a:hover {
+                color: #EC9622;
+            }
+
+        /* END USER NAV */
+
+    /* END USER */
+
+    /**
+     *
+     * LOCAL NAV
+     *
+     * This is the main navigation bar. You can customize your links in the Settings page.
+     *
+     * The div#local appears AFTER the content for accessbility reasons. Please see
+     * http: //www.contentwithstyle.co.uk/Articles/17/ for details.
+     *
+     * Because the navigation is placed below the content, you will most likely need
+     * to use absolute positioning. Please make sure you understand positioning before
+     * trying to customize it!
+     *
+     */
+
+        div#local {
+            background: #0f0206 url(/public/Mashery/images/clients/rovi/mainnavgif.gif) no-repeat 0 0;
+            left: 0;
+            top: 0;
+            height: 40px;
+        }
+        
+        div#local ul {
+            padding: 0  20px;
+        }
+        
+        div#local li {}
+        
+        div#local li a,
+        div#local li a:link,
+        div#local li a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        div#local a:hover {}
+        
+        div#local li.active a,
+        div#local li.active a:link,
+        div#local li.active a:visited,
+        div#local li.active a:hover {
+            color: #EC9622;
+        }
+        
+    /* END LOCAL NAV */
+
+    /**
+     *
+     * USER MENU
+     *
+     * The User Menu contains actions for the user: Start New Entry, New Post, etc.
+     * 
+     */
+
+        /**
+         *
+         * SUB LOCAL NAVIGATION
+         *
+         * Links under each primary navigation section.
+         *
+         */
+         
+            div#user-menu {
+                display: none;
+            }
+            
+            div#user-menu li a {
+            }
+            
+            div#user-menu li.active a,
+            div#user-menu li.active a:hover {
+            }
+        
+        /* END SUBLOCAL NAV */
+
+    /* END USER MENU */
+
+    /**
+     *
+     * CONTENT 
+     *
+     * Where the magic happens (Content of page)
+     *
+     */
+     
+        div#content {
+            background: #fff url(/public/Mashery/images/clients/rovi/side.png) repeat-y 100% 0;
+        }
+        
+        .no_sub div#content {
+            background-image: none;
+        }
+
+        /**
+         *
+         * MAIN
+         *
+         * This is where almost all the content for every page is.
+         *
+         */
+
+            div#main {
+                background: transparent url(/public/Mashery/images/clients/rovi/upperright.png) no-repeat 100% 0;
+                width: 664px;
+                margin: 40px 0 0;
+            }
+
+            /**
+             *
+             * BLOG, WIKI, FORUM, and DOCS
+             *
+             * Styling for the sections, meta info, file tables, and other parts of these apps.
+             *
+             * Remember, there are usually different states of each app type! For example, when browsing the forum the body will have
+             * an id of #page-forum and a class of .browse. If you click on a forum post to view it, the body will still have the same
+             * id, but the class will change to .read. This way you can control the different views of each app.
+             *
+             */
+             
+                /* Comments in all sections except the forum. */
+                div#main div.comments ol li.comment {}
+
+                /* Docs */
+                
+                    .page-docs div#sub {
+                        display: none;
+                        padding: 20px 0 10px;
+                        width: 256px;
+                    }
+                    
+                    .page-docs div#sub li,
+                    .page-docs div#sub h2 {
+                        padding: 2px 10px;
+                    }
+
+                    .page-docs div#sub ul {
+                        border-top: 1px solid #fff;
+                    }
+
+                        .page-docs div#sub ul ul {
+                            border: 0;
+                            margin: 0;
+                        }
+
+                    .page-docs div#sub li {
+                        border-bottom: 1px solid #fff;
+                        margin-bottom: 0;
+                    }
+
+                        .page-docs div#sub li li {
+                            border: 0;
+                        }
+                    
+                    .page-docs div#main { width: 920px; }
+                    
+                    .page-docs div#content, .page-docs div#main {  background-image: none; }
+                
+                /* End Docs */
+
+                /**
+                 *
+                 * FORUM
+                 *
+                 * The forum is very different than the blog, wiki, docs, etc. Be sure to check out the markup, the default styling
+                 * should be ok for most people, but you may need to override some of your list (ul, ol) rules that you set in this
+                 * stylesheet.
+                 *
+                 */
+                 
+                    /* The "Start new topic" button */
+                    body.page-forum a.create-new {}
+                 
+                    body.page-forum ol.categories {}
+                    
+                    body.page-forum ol.topics {}
+                    
+                    body.page-forum ol.comments {}
+                    
+                    /* Subject of a thread */
+                    body.page-forum h3.subject{}
+                    
+                    /* The "original post" in each thread looks different by default */
+                    body.page-forum ol.comments li.comment.first {}
+                 
+                /* END FORUM */
+
+            /* END BLOG, WIKI, FORUM, and DOCS */
+            
+            /* Registration */
+            
+                input.members-company {width: 18em;}
+                input.members-address1 {width: 18em;}
+                input.members-address2 {width: 18em;}
+                input.members-city_or_town {width: 12em;}
+                input.members-country_code {width: 18em;}
+                input.members-zip_code {width: 8em;}
+                input.members-phone {width: 8em;}
+                
+            /* End Registration */
+
+        /* END MAIN */
+        
+        /**
+         *
+         * SUB
+         *
+         * The sub div is usually the small sidebar on the blog/wiki/forum, although some may prefer to hide it altogether.
+         *
+         * In the Dashboard, the sub is also where the form lives to add new content in the Content page.
+         *
+         */
+                 
+            div#sub {
+                margin: 40px 0 0;
+                width: 236px;
+                font-size: 11px;
+                color: #fff;
+                background: #433a38 url(/public/Mashery/images/clients/rovi/bottomleft.png) no-repeat 0 100%;
+            }
+            
+            div#sub h2,
+            div#sub h3,
+            div#sub h4 {
+                color: #fff;
+            }
+            
+            div#sub a {
+                color: #fff;
+            }
+            
+            div#sub a.active {
+                color: #EC9622;
+            }
+            
+        /* END SUB */
+
+    /* END CONTENT */
+        
+    /**
+     *
+     * FOOTER
+     *
+     * Contains your site-info as well as your footer links.
+     * 
+     */
+    
+        div#footer a {
+            color: #A6958E;
+        }
+        
+        #footer { color: #A6958E; }
+        
+        div#siteinfo p {  font-size: 12px; }
+    
+    /* END FOOTER */
+    
+/* END ROVI THEME */

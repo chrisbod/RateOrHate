@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mess around</title>
+  <link rel="stylesheet" href="css/typography.css"></link>
+  <link rel="stylesheet" href="css/layout.css"></link>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="js/juicy/pointer.highlight.js"></script>
+  <script src="js/juicy/scroll.events.js"></script>
+  <script src="js/rateableSelect.js"></script>
+  <script src="js/services/itunes.js"></script>
+  <style>
+    .pointer-highlight {outline: 1px solid red;}
+  </style>
+  <script>
+  new JuicyScrollEvents().activate()
+
+
+  </script>
+</head>
+<body ng-app="rateableSelect"   jc-highlight>
+  <form id="visual"></form>
+<form id="rateable-form" ng-controller="RateableSelectCtrl" class="{{rateable ? 'active '+ rateable.className : 'inactive'}}">
+  <fieldset id="rateable-search" ng-controller="RateableSearchCtrl" ng-disabled="!rateable" class="active">
+    
+      
+    <fieldset id="rateable-search-basic">
+      <div class="webkit-bug-hack" role="group">
+        <button ng-click="changeRateable()" for="rateable-choice" class="small-icon" style="{{rateable ? 'background-image:url(img/icons/rateables/'+rateable.id+'.svg)' : ''}}">&nbsp;</button>
+        <input pattern=".{3,}" type="search" placeholder="{{!rateable? 'Pick a category' : rateable.name+'...'}}" ng-model="searchTerm" required="true" title="minimum 3 characters">
+        <button class="small-icon search" type="submit" ng-click="search()" ng-disabled="!rateable">&nbsp;</button>
+      </div>
+    </fieldset>
+  
+  </fieldset>
+  <fieldset id="rateable-choice" load-state class="{{!rateable ? 'active' : ''}}">
+    
+    <legend class="underlay" ng-bind="legend"></legend>
+    <ul>
+      <li ng-repeat="rateable in rateables"><input id="{{rateable.id}}-radio" type="radio" name="rateable"  ng-value="rateable" ng-model="$parent.rateable" ng-change="changeRateable(rateable)" form="visual"><label for="{{rateable.id}}-radio" class="icon">
+        <span class="icon-front" style="background-image:url(img/icons/rateables/{{rateable.id}}.svg)"></span>
+        <span class="icon-back" ng-bind="rateable.name"></span>
+      </label></li>
+    </ul>
+    <legend class="overlay" ng-bind="legend"></legend>
+  
+  </fieldset>
+  
+  <fieldset id="rateable-results" ng-controller="RateableSearchResultsCtrl" load-state class="{{results? 'active' : ''}}"  jc-highlight>
+      <div class="overflow">
+        <table>
+          <tr class="result-name {{result.id===selectedId? 'selected' : ''}}" ng-repeat="result in results track by result.id" ng-click="rate(result)" tabindex="0">
+            <td class="result-name-primary" ng-bind="result.name[0]"></td>
+            <td class="result-name-secondary" ng-bind="result.name[1]"></td>
+          </tr>
+      </table>
+      </div>
+    </div>
+    <!--div class="result-meta">
+            <span class="result-meta-1" ng-bind="result.meta[0]"></span>
+            <span class="result-meta-2" ng-bind="result.meta[1]"></span>
+            <span class="result-meta-3" ng-bind="result.meta[2]"></span>
+          </div>
+          <div class="result-links">
+            <span ng-repeat="link in result.links track by $index">
+              <a class="result-link" href="{{link.html}}" target="_system">{{link.provider}}</a>|
+              <a class="result-link" href="{{link.preview}}" target="_system" >preview</a>
+            <span>
+          </div-->
+
+  </fieldset>
+  <fieldset id="rateable-view" ng-controller="RateableViewCtrl" load-state>
+      
+    <fieldset id="rateable-view-summary">
+      <h1>{{summary.name}}</h1>
+      <h2>{{summary.rateables.join(',')}}</h2>
+      <button ng-show="!details" ng-click="fetchDetails(summary)">View Details</button>
+      <div ng-show="details">
+        <span ng-bind="details.summary"></span>
+          
+      </div>
+      <fieldset id="rateable-view-actions" ng-disabled="!summary">
+            <fieldset>
+              <button ng-click="rate()">
+                <span>Rate<span>
+                <output ng-bind="details.ratings.rate"></output>
+              </button>
+              <button ng-click="hate()">
+                <span>Hate<span>
+                <output ng-bind="details.ratings.hate"></output>
+              </button>
+              <fieldset>
+              <label for="rateable-view-submenu-checkbox">More...</label>
+              <button>Favour it</button>
+              <button>Later it</button>
+              <button>Bin it</button>
+            </fieldset>
+            </fieldset>
+            
+        </fieldset>
+    </fieldset>
+      
+  </fieldset>
+  <!--input type="checkbox" id="rateable-settings-checkbox">
+  <fieldset id="rateable-settings">
+      <label for="rateable-settings-checkbox">Settings</label>
+      <input type="checkbox" id="rateable-settings-general-checkbox">
+      <fieldset>
+        <label for="rateable-settings-general-checkbox">General</label>
+        <ul>
+            <li>
+              Rate your mates
+            </li>
+        </ul>
+      </fieldset>
+      <input type="checkbox" id="rateable-settings-profile-checkbox">
+      <fieldset>
+        <label for="rateable-settings-profile-checkbox">Profile</label>
+        <ul>
+            <li>
+             Profile
+            </li>
+        </ul>
+      </fieldset>
+      <input type="checkbox" id="rateable-settings-later-checkbox">
+      <fieldset>
+        <label for="rateable-settings-later-checkbox">Later</label>
+        <ul>
+            <li>
+             Later
+            </li>
+        </ul>
+      </fieldset>
+      <input type="checkbox" id="rateable-settings-rates-checkbox">
+      <fieldset>
+        <label for="rateable-settings-rates-checkbox">Rates</label>
+        <ul>
+            <li>
+              Rates
+            </li>
+        </ul>
+      </fieldset>
+      <input type="checkbox" id="rateable-settings-hates-checkbox">
+      <fieldset>
+        <label for="rateable-settings-rates-checkbox">Hates</label>
+        <ul>
+            <li>
+              Hates
+            </li>
+        </ul>
+      </fieldset>
+  </fieldset-->
+</form>
+
+
+</body>
+</html>

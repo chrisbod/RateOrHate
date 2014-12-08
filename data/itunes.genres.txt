@@ -1,0 +1,912 @@
+26,Podcasts:,
+	1301,Arts
+	1306,Food
+	1401,Literature
+	1402,Design
+	1405,Performing Arts
+	1406,Visual Arts
+	1459,Fashion Beauty
+	1303,Comedy
+	1304,Education
+	1415,K–12
+	1416,Higher Education
+	1468,Educational Technology
+	1469,Language Courses
+	1470,Training
+	1305,Kids Family
+	1307,Health
+	1417,Fitness Nutrition
+	1420,Self-Help
+	1421,Sexuality
+	1481,Alternative Health
+	1309,TV Film
+	1310,Music
+	1311,News Politics
+	1314,Religion Spirituality
+	1438,Buddhism
+	1439,Christianity
+	1440,Islam
+	1441,Judaism
+	1444,Spirituality
+	1463,Hinduism
+	1464,Other
+	1315,Science Medicine
+	1477,Natural Sciences
+	1478,Medicine
+	1479,Social Sciences
+	1316,Sports Recreation
+	1456,Outdoor
+	1465,Professional
+	1466,College High School
+	1467,Amateur
+	1318,Technology
+	1446,Gadgets
+	1448,Tech,News
+	1450,Podcasting
+	1480,Software How-To
+	1321,Business
+	1410,Careers
+	1412,Investing
+	1413,Management Marketing
+	1471,Business News
+	1472,Shopping
+	1323,Games & Hobbies
+	1404,Video Games
+	1454,Automotive
+	1455,Aviation
+	1460,Hobbies
+	1461,Other Games
+	1324,Society Culture
+	1302,Personal Journals
+	1320,Places Travel
+	1443,Philosophy
+	1462,History
+	1325,Government Organizations
+	1473,National
+	1474,Regional
+	1475,Local
+	1476,Non-Profit
+31,Music Videos
+	1602,Blues
+	1603,Comedy
+	1604,Children’s Music
+	1605,Classical
+	1606,Country
+	1607,Electronic
+	1608,Holiday
+	1609,Opera
+	1610,Singer Songwriter
+	1611,Jazz
+	1612,Latino
+	1613,New Age
+	1614,Pop
+	1615,R&B/Soul
+	1616,Soundtrack
+	1617,Dance
+	1618,Hip-Hop Rap
+	1619,World
+	1620,Alternative
+	1621,Rock
+	1622,Christian Gospel
+	1623,Vocal
+	1624,Reggae
+	1625,Easy Listening
+	1626,Podcasts
+	1627,J-Pop
+	1628,Enka
+	1629,Anime
+	1630,Kayokyoku
+	1631,Disney
+	1632,French Pop
+	1633,German Pop
+	1634,German Folk
+32,TV Shows
+	4000,Comedy
+	4001,Drama
+	4002,Animation
+	4003,Action Adventure
+	4004,Classic
+	4005,Kids
+	4006,Nonfiction
+	4007,Reality,TV
+	4008,Sci-Fi Fantasy
+	4009,Sports
+	4010,Teens
+	4011,Latino,TV
+33,Movies
+	4401,Action Adventure
+	4402,Anime
+	4403,Classics
+	4404,Comedy
+	4405,Documentary
+	4406,Drama
+	4407,Foreign
+	4408,Horror
+	4409,Independent
+	4410,Kids Family
+	4411,Musicals
+	4412,Romance
+	4413,Sci-Fi Fantasy
+	4414,Short,Films
+	4415,Special,Interest
+	4416,Thriller
+	4417,Sports
+	4418,Western
+	4419,Urban
+	4420,Holiday
+	4421,Made for TV
+	4422,Concert Films
+	4423,Music Documentaries
+	4424,Music Feature Films
+	4425,Japanese Cinema
+	4426,Jidaigeki
+	4427,Tokusatsu
+	4428,Korean Cinema
+34,Music
+	2,Blues
+	1007,Chicago Blues
+	1009,Classic Blues
+	1010,Contemporary Blues
+	1011,Country Blues
+	1012,Delta Blues
+	1013,Electric Blues
+	1210,Acoustic Blues
+3,Comedy
+	1167,Novelty
+	1171,Standup Comedy
+4,Children’s Music
+	1014,Lullabies
+	1015 Sing-Along
+	1016,Stories
+5,Classical
+	1017,Avant-Garde
+	1018,Baroque
+	1019,Chamber Music
+	1020,Chant
+	1021,Choral
+	1022,Classical Crossover
+	1023,Early Music
+	1024,Impressionist
+	1025,Medieval
+	1026,Minimalism
+	1027,Modern Composition
+	1028,Opera
+	1029,Orchestral
+	1030,Renaissance
+	1031,Romantic
+	1032,Wedding Music
+	1211,High Classical
+6,Country
+	1033,Alternative Country
+	1034,Americana
+	1035,Bluegrass
+	1036,Contemporary Bluegrass
+	1037,Contemporary,Country
+	1038,Country,Gospel
+	1039,Honky,Tonk
+	1040,Outlaw,Country
+	1041,Traditional,Bluegrass
+	1042,Traditional,Country
+	1043,Urban,Cowboy
+7,Electronic
+	1056,Ambient
+	1057,Downtempo
+	1058,Electronica
+	1060,IDM/Experimental
+	1061,Industrial
+8,Holiday
+	1079,Chanukah
+	1080,Christmas
+	1081,Christmas:,Children’s
+	1082,Christmas:,Classic
+	1083,Christmas:,Classical
+	1084,Christmas:,Jazz
+	1085,Christmas:,Modern
+	1086,Christmas:,Pop
+	1087,Christmas:,R&B
+	1088,Christmas:,Religious
+	1089,Christmas:,Rock
+	1090,Easter
+	1091,Halloween
+	1092,Holiday:,Other
+	1093,Thanksgiving
+9,Opera
+	10,Singer/Songwriter
+	1062,Alternative,Folk
+	1063,Contemporary,Folk
+	1064,Contemporary,Singer/Songwriter
+	1065,Folk-Rock
+	1066,New,Acoustic
+	1067,Traditional,Folk
+11,Jazz
+	1052,Big,Band
+	1106,Avant-Garde,Jazz
+	1107,Contemporary,Jazz
+	1108,Crossover,Jazz
+	1109,Dixieland
+	1110,Fusion
+	1111,Latin,Jazz
+	1112,Mainstream,Jazz
+	1113,Ragtime
+	1114,Smooth,Jazz
+	1207,Hard,Bop
+	1208,Trad,Jazz
+	1209,Cool
+12,Latino
+	1115,Latin,Jazz
+	1116,Contemporary,Latin
+	1117,Pop,Latino
+	1118,Raíces
+	1119,Reggaeton,y,Hip-Hop
+	1120,Baladas,y,Boleros
+	1121,Alternativo Rock,Latino
+	1123,Regional,Mexicano
+	1124,Salsa,y,Tropical
+13,New,Age
+	1125,Environmental
+	1126,Healing
+	1127,Meditation
+	1128,Nature
+	1129,Relaxation
+	1130,Travel
+14,Pop
+	1131,Adult,Contemporary
+	1132,Britpop
+	1133,Pop/Rock
+	1134,Soft,Rock
+	1135,Teen,Pop
+15,R&B/Soul
+	1136,Contemporary,R&B
+	1137,Disco
+	1138,Doo,Wop
+	1139,Funk
+	1140,Motown
+	1141,Neo-Soul
+	1142,Quiet,Storm
+	1143,Soul
+16,Soundtrack
+	1165,Foreign,Cinema
+	1166,Musicals
+	1168,Original,Score
+	1169,Soundtrack
+	1172,TV,Soundtrack
+17,Dance
+	1044,Breakbeat
+	1045,Exercise
+	1046,Garage
+	1047,Hardcore
+	1048,House
+	1049,Jungle/Drum’n’bass
+	1050,Techno
+	1051,Trance
+18,Hip-Hop/Rap
+	1068,Alternative,Rap
+	1069,Dirty,South
+	1070,East,Coast,Rap
+	1071,Gangsta,Rap
+	1072,Hardcore,Rap
+	1073,Hip-Hop
+	1074,Latin,Rap
+	1075,Old,School,Rap
+	1076,Rap
+	1077,Underground,Rap
+	1078,West,Coast,Rap
+19,World
+	1177,Afro-Beat
+	1178,Afro-Pop
+	1179,Cajun
+	1180,Celtic
+	1181,Celtic,Folk
+	1182,Contemporary,Celtic
+	1184,Drinking,Songs
+	1185,Indian,Pop
+	1186,Japanese,Pop
+	1187,Klezmer
+	1188,Polka
+	1189,Traditional,Celtic
+	1190,Worldbeat
+	1191,Zydeco
+	1195,Caribbean
+	1196,South,America
+	1197,Middle,East
+	1198,North,America
+	1199,Hawaii
+	1200,Australia
+	1201,Japan
+	1202,France
+	1203,Africa
+	1204,Asia
+	1205,Europe
+	1206,South,Africa
+20,Alternative
+	1001,College,Rock
+	1002,Goth,Rock
+	1003,Grunge
+	1004,Indie,Rock
+	1005,New,Wave
+	1006,Punk
+21,Rock
+	1144,Adult,Alternative
+	1145,American,Trad,Rock
+	1146,Arena,Rock
+	1147,Blues-Rock
+	1148,British,Invasion
+	1149,Death,Metal/Black,Metal
+	1150,Glam,Rock
+	1151,Hair,Metal
+	1152,Hard,Rock
+	1153,Metal
+	1154,Jam,Bands
+	1155,Prog-Rock/Art,Rock
+	1156,Psychedelic
+	1157,Rock Roll
+	1158,Rockabilly
+	1159,Roots,Rock
+	1160,Singer/Songwriter
+	1161,Southern,Rock
+	1162,Surf
+	1163,Tex-Mex
+22,Christian Gospel
+	1094,CCM
+	1095,Christian,Metal
+	1096,Christian,Pop
+	1097,Christian,Rap
+	1098,Christian,Rock
+	1099,Classic,Christian
+	1100,Contemporary,Gospel
+	1101,Gospel
+	1103,Praise Worship
+	1104,Southern,Gospel
+	1105,Traditional,Gospel
+23,Vocal
+	1173,Standards
+	1174,Traditional,Pop
+	1175,Vocal,Jazz
+	1176,Vocal,Pop
+24,Reggae
+	1183,Dancehall
+	1192,Roots,Reggae
+	1193,Dub
+	1194,Ska
+25,Easy,Listening
+	1053,Bop
+	1054,Lounge
+	1055,Swing
+27,J-Pop
+28,Enka
+29,Anime
+30,Kayokyoku
+50,Fitness Workout
+51,K-Pop
+52,Karaoke
+53,Instrumental
+	1122,Brazilian
+	1220,Axé
+	1221,Bossa,Nova
+	1222,Choro
+	1223,Forró
+	1224,Frevo
+	1225,MPB
+	1226,Pagode
+	1227,Samba
+	1228,Sertanejo
+	1229,Baile,Funk
+50000061,Spoken,Word
+50000063,Disney
+50000064,French,Pop
+50000066,German,Pop
+50000068,German,Folk
+35,iPod,Games
+36,App,Store
+	6000,Business
+	6001,Weather
+	6002,Utilities
+	6003,Travel
+	6004,Sports
+	6005,Social,Networking
+	6006,Reference
+	6007,Productivity
+	6008,Photo Video
+	6009,News
+	6010,Navigation
+	6011,Music
+	6012,Lifestyle
+	6013,Health Fitness
+	6014,Games
+		7001,Action
+		7002,Adventure
+		7003,Arcade
+		7004,Board
+		7005,Card
+		7006,Casino
+		7007,Dice
+		7008,Educational
+		7009,Family
+		7010,Kids
+		7011,Music
+		7012,Puzzle
+		7013,Racing
+		7014,Role,Playing
+		7015,Simulation
+		7016,Sports
+		7017,Strategy
+		7018,Trivia
+		7019,Word
+	6015,Finance
+	6016,Entertainment
+	6017,Education
+	6018,Books
+	6020,Medical
+	6021,Newsstand
+		13001,News Politics
+		13002,Fashion Style
+		13003,Home Garden
+		13004,Outdoors Nature
+		13005,Sports Leisure
+		13006,Automotive
+		13007,Arts Photography
+		13008,Brides Weddings
+		13009,Business Investing
+		13010,Children’s,Magazines
+		13011,Computers Internet
+		13012,Cooking,,Food Drink
+		13013,Crafts Hobbies
+		13014,Electronics Audio
+		13015,Entertainment
+		13017,Health,,Mind Body
+		13018,History
+		13019,Literary,Magazines Journals
+		13020,Men’s,Interest
+		13021,Movies Music
+		13023,Parenting Family
+		13024,Pets
+		13025,Professional Trade
+		13026,Regional,News
+		13027,Science
+		13028,Teens
+		13029,Travel Regional
+		13030,Women’s,Interest
+	6022,Catalogs
+37,Tones
+	8053,Ringtones
+		8001,Alternative
+		8002,Blues
+		8003,Children’s,Music
+		8004,Classical
+		8005,Comedy
+		8006,Country
+		8007,Dance
+		8008,Electronic
+		8009,Enka
+		8010,French,Pop
+		8011,German,Folk
+		8012,German,Pop
+		8013,Hip-Hop/Rap
+		8014,Holiday
+		8015,Inspirational
+		8016,J-Pop
+		8017,Jazz
+		8018,Kayokyoku
+		8019,Latin
+		8020,New,Age
+		8021,Opera
+		8022,Pop
+		8023,R&B/Soul
+		8024,Reggae
+		8025,Rock
+		8026,Singer/Songwriter
+		8027,Soundtrack
+		8028,Spoken,Word
+		8029,Vocal
+		8030,World
+		8054,Alert,Tones
+		8050,Sound,Effects
+		8051,Dialogue
+		8052,Music
+38,Books
+	9002,Nonfiction
+		10038,Family Relationships
+		10091,Philosophy
+		10120,Social,Science
+		10138,Transportation
+		10149,True,Crime
+	9003,Romance
+		10056,Erotica
+		10057,Contemporary
+		10058,Fantasy,,Futuristic Ghost
+		10059,Historical
+		10060,Short,Stories
+		10061,Suspense
+		10062,Western
+	9004,Travel Adventure
+		10139,Africa
+		10140,Asia
+		10141,Specialty,Travel
+		10142,Canada
+		10143,Caribbean
+		10144,Latin,America
+		10145,Essays Memoirs
+		10146,Europe
+		10147,Middle,East
+		10148,United,States
+	9007,Arts Entertainment
+		10002,Art Architecture
+		10036,Theater
+		10067,Games
+		10087,Music
+		10089,Performing,Arts
+		10092,Photography
+	9008,Biographies Memoirs
+	9009,Business Personal,Finance
+		10005,Industries Professions
+		10006,Marketing Sales
+		10007,Small,Business Entrepreneurship
+		10008,Personal,Finance
+		10009,Reference
+		10010,Careers
+		10011,Economics
+		10012,Investing
+		10013,Finance
+		10014,Management Leadership
+	9010,Children Teens
+		10081,Children’s,Fiction
+		10082,Children’s,Nonfiction
+	9012,Humor
+	9015,History
+		10070,Africa
+		10071,Americas
+		10072,Ancient
+		10073,Asia
+		10074,Australia Oceania
+		10075,Europe
+		10076,Latin,America
+		10077,Middle,East
+		10078,Military
+		10079,United,States
+		10080,World
+	9018,Religion Spirituality
+		10003,Bibles
+		10105,Bible,Studies
+		10106,Buddhism
+		10107,Christianity
+		10108,Hinduism
+		10109,Islam
+		10110,Judaism
+	9019,Science Nature
+		10085,Mathematics
+		10088,Nature
+		10111,Astronomy
+		10112,Chemistry
+		10113,Earth,Sciences
+		10114,Essays
+		10115,History
+		10116,Life,Sciences
+		10117,Physics
+		10118,Reference
+	9020,Sci-Fi Fantasy
+		10044,Fantasy
+		10063,Science,Fiction
+		10064,Science,Fiction Literature
+	9024,Lifestyle Home
+		10001,Antiques Collectibles
+		10034,Crafts Hobbies
+		10068,Gardening
+		10090,Pets
+	9025,Health,,Mind Body
+		10004,Spirituality
+		10069,Health Fitness
+		10094,Psychology
+		10119,Self-Improvement
+	9026,Comics Graphic,Novels
+		10015,Graphic,Novels
+		10016,Manga
+	9027,Computers Internet
+		10017,Computers
+		10018,Databases
+		10019,Digital,Media
+		10020,Internet
+		10021,Network
+		10022,Operating,Systems
+		10023,Programming
+		10024,Software
+		10025,System,Administration
+	9028,Cookbooks,,Food Wine
+		10026,Beverages
+		10027,Courses Dishes
+		10028,Special,Diet
+		10029,Special,Occasions
+		10030,Methods
+		10031,Reference
+		10032,Regional Ethnic
+		10033,Specific,Ingredients
+	9029,Professional Technical
+		10035,Design
+		10037,Education
+		10083,Law
+		10086,Medical
+		10137,Engineering
+	9030,Parenting
+	9031,Fiction Literature
+		10039,Action Adventure
+		10040,African,American
+		10041,Religious
+		10042,Classics
+		10043,Erotica
+		10045,Gay
+		10046,Ghost
+		10047,Historical
+		10048,Horror
+		10049,Literary
+		10065,Short,Stories
+		10084,Literary,Criticism
+		10093,Poetry
+	9032,Mysteries Thrillers
+		10050,Hard-Boiled
+		10051,Historical
+		10052,Police,Procedural
+		10053,Short,Stories
+		10054,British,Detectives
+		10055,Women,Sleuths
+	9033,Reference
+		10066,Foreign,Languages
+		10095,Almanacs Yearbooks
+		10096,Atlases Maps
+		10097,Catalogs Directories
+		10098,Consumer,Guides
+		10099,Dictionaries Thesauruses
+		10100,Encyclopedias
+		10101,Etiquette
+		10102,Quotations
+		10103,Words Language
+		10104,Writing
+		10136,Study,Aids
+	9034,Politics Current,Events
+	9035,Sports Outdoors
+		10121,Baseball
+		10122,Basketball
+		10123,Coaching
+		10124,Extreme,Sports
+		10125,Football
+		10126,Golf
+		10127,Hockey
+		10128,Mountaineering
+		10129,Outdoors
+		10130,Racket,Sports
+		10131,Reference
+		10132,Soccer
+		10133,Training
+		10134,Water,Sports
+		10135,Winter,Sports
+39,Mac,App,Store
+	12001,Business
+	12002,Developer,Tools
+	12003,Education
+	12004,Entertainment
+	12005,Finance
+	12006,Games
+		12201,Action
+		12202,Adventure
+		12203,Arcade
+		12204,Board
+		12205,Card
+		12206,Casino
+		12207,Dice
+		12208,Educational
+		12209,Family
+		12210,Kids
+		12211,Music
+		12212,Puzzle
+		12213,Racing
+		12214,Role,Playing
+		12215,Simulation
+		12216,Sports
+		12217,Strategy
+		12218,Trivia
+		12219,Word
+	12007,Health Fitness
+	12008,Lifestyle
+	12010,Medical
+	12011,Music
+	12012,News
+	12013,Photography
+	12014,Productivity
+	12015,Reference
+	12016,Social,Networking
+	12017,Sports
+	12018,Travel
+	12019,Utilities
+	12020,Video
+	12021,Weather
+	12022,Graphics Design
+40,Textbooks
+40000000,iTunes,U
+	40000001,Business
+		40000002,Economics
+		40000003,Finance
+		40000004,Hospitality
+		40000005,Management
+		40000006,Marketing
+		40000007,Personal,Finance
+		40000008,Real,Estate
+		40000121,Entrepreneurship
+	40000009,Engineering
+		40000010,Chemical Petroleum,Engineering
+		40000011,Civil,Engineering
+		40000012,Computer,Science
+		40000013,Electrical,Engineering
+		40000014,Environmental,Engineering
+		40000015,Mechanical,Engineering
+	40000016,Art Architecture
+		40000017,Architecture
+		40000019,Art,History
+		40000020,Dance
+		40000021,Film
+		40000022,Design
+		40000023,Interior,Design
+		40000024,Music
+		40000025,Theater
+		40000116,Culinary,Arts
+		40000117,Fashion
+		40000118,Media,Arts
+		40000119,Photography
+		40000120,Visual,Art
+	40000026,Health Medicine
+		40000027,Anatomy Physiology
+		40000028,Behavioral,Science
+		40000029,Dentistry
+		40000030,Diet Nutrition
+		40000031,Emergency,Medicine
+		40000032,Genetics
+		40000033,Gerontology
+		40000034,Health Exercise,Science
+		40000035,Immunology
+		40000036,Neuroscience
+		40000037,Pharmacology Toxicology
+		40000038,Psychiatry
+		40000039,Global,Health
+		40000040,Radiology
+		40000129,Nursing
+	40000041,History
+		40000042,Ancient,History
+		40000043,Medieval,History
+		40000044,Military,History
+		40000045,Modern,History
+		40000046,African,History
+		40000047,Asia-Pacific,History
+		40000048,European,History
+		40000049,Middle,Eastern,History
+		40000050,North,American,History
+		40000051,South,American,History
+	40000053,Communications Media
+		40000122,Broadcasting
+		40000123,Digital,Media
+		40000124,Journalism
+		40000125,Photojournalism
+		40000126,Print
+		40000127,Speech
+		40000128,Writing
+	40000054,Philosophy
+		40000146,Aesthetics
+		40000147,Epistemology
+		40000148,Ethics
+		40000149,Metaphysics
+		40000150,Political,Philosophy
+		40000151,Logic
+		40000152,Philosophy,of,Language
+		40000153,Philosophy,of,Religion
+	40000055,Religion Spirituality
+		40000156,Buddhism
+		40000157,Christianity
+		40000158,Comparative,Religion
+		40000159,Hinduism
+		40000160,Islam
+		40000161,Judaism
+		40000162,Other,Religions
+		40000163,Spirituality
+	40000056,Language
+		40000057,African,Languages
+		40000058,Ancient,Languages
+		40000061,English
+		40000063,French
+		40000064,German
+		40000065,Italian
+		40000066,Linguistics
+		40000068,Spanish
+		40000069,Speech,Pathology
+		40000130,Arabic
+		40000131,Chinese
+		40000132,Hebrew
+		40000133,Hindi
+		40000134,Indigenous,Languages
+		40000135,Japanese
+		40000136,Korean
+		40000137,Other,Languages
+		40000138,Portuguese
+		40000139,Russian
+	40000070,Literature
+		40000071,Anthologies
+		40000072,Biography
+		40000073,Classics
+		40000074,Literary,Criticism
+		40000075,Fiction
+		40000076,Poetry
+		40000145,Comparative,Literature
+	40000077,Mathematics
+		40000078,Advanced,Mathematics
+		40000079,Algebra
+		40000080,Arithmetic
+		40000081,Calculus
+		40000082,Geometry
+		40000083,Statistics
+	40000084,Science
+		40000085,Agricultural
+		40000086,Astronomy
+		40000087,Atmosphere
+		40000088,Biology
+		40000089,Chemistry
+		40000090,Ecology
+		40000091,Geography
+		40000092,Geology
+		40000093,Physics
+		40000164,Environment
+	40000094,Psychology Social,Science
+		40000098,Psychology
+		40000099,Social,Welfare
+		40000100,Sociology
+		40000154,Archaeology
+		40000155,Anthropology
+	40000101,Society
+		40000103,Asia,Pacific,Studies
+		40000104,European,Studies
+		40000105,Indigenous,Studies
+		40000106,Latin Caribbean,Studies
+		40000107,Middle,Eastern,Studies
+		40000108,Women’s,Studies
+		40000165,African,Studies
+		40000166,American,Studies
+		40000167,Cross-cultural,Studies
+		40000168,Immigration Emigration
+		40000169,Race Ethnicity,Studies
+		40000170,Sexuality,Studies
+	40000109,Teaching Learning
+		40000110,Curriculum Teaching
+		40000111,Educational,Leadership
+		40000112,Family Childcare
+		40000113,Learning,Resources
+		40000114,Psychology Research
+		40000115,Special,Education
+		40000171,Educational,Technology
+		40000172,Information/Library,Science
+	40000140,Law Politics
+		40000095,Law
+		40000096,Political,Science
+		40000097,Public,Administration
+		40000141,Foreign,Policy International,Relations
+		40000142,Local,Governments
+		40000143,National,Governments
+		40000144,World,Affairs
+	50000024,Audiobooks
+74,News
+75,Programs Performances
+	50000040,Fiction
+	50000041,Arts Entertainment
+	50000042,Biography Memoir
+	50000043,Business
+	50000044,Kids Young,Adults
+	50000045,Classics
+	50000046,Comedy
+	50000047,Drama Poetry
+	50000048,Speakers Storytellers
+	50000049,History
+	50000050,Languages
+	50000051,Mystery
+	50000052,Nonfiction
+	50000053,Religion Spirituality
+	50000054,Science
+	50000055,Sci-Fi Fantasy
+	50000056,Self,Development
+	50000057,Sports
+	50000058,Technology
+	50000059,Travel Adventure
+	50000069,Romance
+	50000070,Audiobooks,Latino
