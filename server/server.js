@@ -76,7 +76,7 @@ app.route(/^\/api\/music\/(.*)$/).get(
 	logit
 );
 
-app.listen(3000, function () {
-	console.log("Server up on 3000")
+app.listen(8080, function () {
+	console.log("Server up on 8080")
 
 });

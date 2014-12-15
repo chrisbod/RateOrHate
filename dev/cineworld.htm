@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+
+		<script>
+			onload = function () {
+				var opts = document.querySelectorAll("select option"),
+					cinemas = [];
+				[].map.apply(opts,[function(option) {
+					if (option.value != ""){
+						cinemas.push(option.text);
+					}
+				}]);
+				console.log(cinemas)
+			}
+
+		</script>
+	</head>
+	<body>
+	<label>
+    <span>Cinemas showing The Theory of Everything:</span>
+    <select name="cinema">
+        <option value="">Select cinema</option>
+
+        <option value="aberdeen-queens-links">Aberdeen - Queens Links</option>
+        <option value="aberdeen-union-square">Aberdeen - Union Square</option>
+        <option value="aldershot">Aldershot</option>
+        <option value="ashford">Ashford</option>
+        <option value="ashton-under-lyne">Ashton-under-Lyne</option>
+        <option value="bedford">Bedford</option>
+        <option value="birmingham">Birmingham</option>
+        <option value="boldon-tyne-and-wear">Boldon Tyne and Wear</option>
+        <option value="bradford">Bradford</option>
+        <option value="braintree">Braintree</option>
+        <option value="brighton">Brighton</option>
+        <option value="bristol">Bristol</option>
+        <option value="burton-upon-trent">Burton upon Trent</option>
+        <option value="bury-st-edmunds">Bury St. Edmunds</option>
+        <option value="cambridge">Cambridge</option>
+        <option value="cardiff">Cardiff</option>
+        <option value="castleford">Castleford</option>
+        <option value="chesterfield">Chesterfield</option>
+        <option value="chichester">Chichester</option>
+        <option value="crawley">Crawley</option>
+        <option value="didcot">Didcot</option>
+        <option value="didsbury">Didsbury</option>
+        <option value="dundee">Dundee</option>
+        <option value="eastbourne">Eastbourne</option>
+        <option value="edinburgh">Edinburgh</option>
+        <option value="falkirk">Falkirk</option>
+        <option value="glasgow-parkhead">Glasgow - Parkhead</option>
+        <option value="glasgow-renfrew-street">Glasgow - Renfrew Street</option>
+        <option value="gloucester-quays">Gloucester Quays</option>
+        <option value="harlow">Harlow</option>
+        <option value="haverhill">Haverhill</option>
+        <option value="high-wycombe">High Wycombe</option>
+        <option value="hull">Hull</option>
+        <option value="huntingdon">Huntingdon</option>
+        <option value="ipswich">Ipswich</option>
+        <option value="isle-of-wight">Isle Of Wight</option>
+        <option value="jersey">Jersey</option>
+        <option value="leigh">Leigh</option>
+        <option value="liverpool">Liverpool</option>
+        <option value="llandudno">Llandudno</option>
+        <option value="london-bexleyheath">London - Bexleyheath</option>
+        <option value="london-feltham">London - Feltham</option>
+        <option value="london-fulham-road">London - Fulham Road</option>
+        <option value="london-hammersmith">London - Hammersmith</option>
+        <option value="london-haymarket">London - Haymarket</option>
+        <option value="london-the-o2-greenwich">London - The O2, Greenwich </option>
+        <option value="london-wandsworth">London - Wandsworth</option>
+        <option value="london-west-india-quay">London - West India Quay</option>
+        <option value="london-wood-green">London - Wood Green</option>
+        <option value="luton">Luton</option>
+        <option value="middlesbrough">Middlesbrough</option>
+        <option value="milton-keynes">Milton Keynes</option>
+        <option value="newport-wales">Newport Wales</option>
+        <option value="northampton">Northampton</option>
+        <option value="nottingham">Nottingham</option>
+        <option value="rochester">Rochester</option>
+        <option value="rugby">Rugby</option>
+        <option value="runcorn">Runcorn</option>
+        <option value="sheffield">Sheffield</option>
+        <option value="shrewsbury">Shrewsbury</option>
+        <option value="solihull">Solihull</option>
+        <option value="southampton">Southampton</option>
+        <option value="st-helens">St Helens</option>
+        <option value="st-neots">St Neots</option>
+        <option value="stevenage">Stevenage</option>
+        <option value="stockport">Stockport</option>
+        <option value="telford">Telford</option>
+        <option value="wakefield">Wakefield</option>
+        <option value="weymouth">Weymouth</option>
+        <option value="witney">Witney</option>
+        <option value="wolverhampton">Wolverhampton</option>
+        <option value="yeovil">Yeovil</option>
+    </select>
+
+</label>
+
+	</body>
+</html>

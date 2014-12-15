@@ -1,0 +1,65 @@
+
+header h1:after {
+	content: 'mobile';
+	display: block;
+	font-size: 12px;
+}
+
+#search, #card {
+	min-height: 100%;
+	top: 0;
+}
+#card {
+	display: none;
+}
+#card.active {
+	display: block;
+}
+
+
+#search, #card{
+	left: 0;
+	right: 0;
+	background-color: white;
+	width: 100%;
+}
+
+
+#search-toolbar {
+	white-space: nowrap;
+}
+
+#search-filter {
+	height: 30%;
+	min-height: 10em;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#search-results{
+	
+}
+#card{
+
+}
+#card-views{
+
+}
+#card-thumbnail{
+
+
+}
+#card-preview{
+
+}
+#card-additional{
+
+}
+#card-toolbar{
+	
+}
+#card-toolbar-primary{
+
+}
+#card-toolbar-secondary{
+
+}

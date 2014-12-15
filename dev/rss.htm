@@ -1,0 +1,51 @@
+<html>
+<head>
+	<script src="js/vendor/moment-with-locales.min.js"></script>
+	<script>
+
+	var x = new XMLHttpRequest();
+	x.open("GET","http://feeds.bbci.co.uk/news/business/rss.xml")
+	x.onload = function () {
+		var items = this.responseXML.querySelectorAll("item"),
+			news = [];
+		[].forEach.apply(items, [function (itemNode) {
+			var images = itemNode.querySelectorAll("thumbnail")
+			news.push({
+				title:itemNode.querySelector("title").textContent,
+				subtitle:  moment(itemNode.querySelector("pubDate").textContent).calendar(),
+				html: itemNode.querySelector("guid").textContent,
+				image:images[images.length-1].getAttribute("url"),
+				text: itemNode.querySelector("description").textContent
+
+			})
+		}])
+		console.log(news)
+	}
+	x.send();
+
+
+	</script>
+</head>
+<body>
+
+
+
+
+</body>
+<!--
+<title>Pensioner bonds to pay 2.8% and 4%</title>  
+      <description>New pensioner bonds are to carry market-leading interest rates, the government announces, with the products due to be launched in January.</description>  
+      <link>http://www.bbc.co.uk/news/business-30452877#sa-ns_mchannel=rss&amp;ns_source=PublicRSS20-sa</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-30452877</guid>  
+      <pubDate>Fri, 12 Dec 2014 17:35:25 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/79697000/jpg/_79697883_478694863.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/79697000/jpg/_79697884_478694863.jpg"/> 
+
+
+-->
+
+
+
+
+
+</html>

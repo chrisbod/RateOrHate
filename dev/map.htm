@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <script>
+  var initial
+  function foo() {
+    document.documentElement.style.width = "100%"
+
+    var computedStyle = getComputedStyle(document.documentElement);
+    //console.log(computedStyle.fontSize)
+    console.log(window.getComputedStyle(document.documentElement).fontSize)
+
+    var layout = "",
+      width = Math.min(Math.round(parseFloat(computedStyle.width),window.innerWidth)),
+      height = Math.min(Math.round(parseInt(computedStyle.height),window.innerHeight));
+      
+    return {
+      width: width,
+      screenWidth: screen.width,
+      innerWidth: window.innerWidth,
+      nativeWidth: screen.width*devicePixelRatio,
+      nativeHeight:screen.height*devicePixelRatio,
+      ratio:(width/window.innerWidth)
+    }
+  }
+  var before = foo()
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+
+ var after =  foo()
+ console.log((381/2.54)*before.ratio/after.ratio)
+ //console.log(JSON.stringify(after))
+ //console.log(after)
+  </script>
+  <title>Mess around</title>
+  <link rel="stylesheet" href="css/typography.css"></link>
+  <link rel="stylesheet" href="css/layout.css"></link>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="js/juicy/pointer.highlight.js"></script>
+  <script src="js/juicy/scroll.events.js"></script>
+  <script src="js/rateableSelect.js"></script>
+  <script src="js/services/itunes.js"></script>
+  <script src="js/services/cineworld.js"></script>
+  <style>
+    .pointer-highlight {outline: 1px solid red;}
+  </style>
+  <script>
+  new JuicyScrollEvents().activate()
+
+
+  </script>
+</head>
+<body ng-app="rateableSelect"   jc-highlight>
+  <form id="visual"></form>
+<form id="rateable-form" ng-controller="RateableSelectCtrl" class="{{rateable ? 'active '+ rateable.className : 'inactive'}}">
+  <fieldset id="rateable-search" ng-controller="RateableSearchCtrl" ng-disabled="!rateable" class="active">
+    
+      
+    <fieldset id="rateable-search-basic">
+      <div class="webkit-bug-hack" role="group">
+        <button ng-click="changeRateable()" for="rateable-choice" class="small-icon" style="{{rateable ? 'background-image:url(img/icons/rateables/'+rateable.id+'.svg)' : ''}}">&nbsp;</button>
+        <input pattern=".{3,}" type="search" placeholder="{{!rateable? 'Pick a category' : rateable.name+'...'}}" ng-model="searchTerm" required="true" title="minimum 3 characters">
+        <button class="small-icon search" type="submit" ng-click="search()" ng-disabled="!rateable">&nbsp;</button>
+      </div>
+    </fieldset>
+  
+  </fieldset>
+  <fieldset id="rateable-choice" load-state class="{{!rateable ? 'active' : ''}}">
+    
+    <legend class="underlay" ng-bind="legend"></legend>
+    <ul>
+      <li ng-repeat="rateable in rateables"><input id="{{rateable.id}}-radio" type="radio" name="rateable"  ng-value="rateable" ng-model="$parent.rateable" ng-change="changeRateable(rateable)" form="visual"><label for="{{rateable.id}}-radio" class="icon">
+        <span class="icon-front" style="background-image:url(img/icons/rateables/{{rateable.id}}.svg)"></span>
+        <span class="icon-back" ng-bind="rateable.name"></span>
+      </label></li>
+    </ul>
+    <legend class="overlay" ng-bind="legend"></legend>
+  
+  </fieldset>
+  
+  <fieldset id="rateable-results" ng-controller="RateableSearchResultsCtrl" load-state class="{{results? 'active' : ''}}"  jc-highlight>
+      <div class="overflow">
+        <table>
+          <tr class="result-name {{result.id===selectedId? 'selected' : ''}}" ng-repeat="result in results track by result.id" ng-click="rate(result)" tabindex="0">
+            <td class="result-name-primary" ng-bind="result.name[0]"></td>
+            <td class="result-name-secondary" ng-bind="result.name[1]"></td>
+          </tr>
+      </table>
+      </div>
+    <!--div class="result-meta">
+            <span class="result-meta-1" ng-bind="result.meta[0]"></span>
+            <span class="result-meta-2" ng-bind="result.meta[1]"></span>
+            <span class="result-meta-3" ng-bind="result.meta[2]"></span>
+          </div>
+          <div class="result-links">
+            <span ng-repeat="link in result.links track by $index">
+              <a class="result-link" href="{{link.html}}" target="_system">{{link.provider}}</a>|
+              <a class="result-link" href="{{link.preview}}" target="_system" >preview</a>
+            <span>
+          </div-->
+
+  </fieldset>
+  <fieldset id="rateable-view" ng-controller="RateableViewCtrl" load-state>
+      
+    <fieldset id="rateable-view-summary">
+      <div class="rateable-view-summary-card">
+        <header class="rateable-summary-header">
+          <h1 ng-bind="summary.name[0]"></h1> 
+          <h2 ng-bind="summary.name[1]"></h2>
+        </header>
+        <section class="rateable-summary-snapshot">
+          <div class="rateable-summary-preview">
+            <img ng-src="{{summary.links[0].image}}" style="width:100%;height:100%">
+          </div>
+          <!--div class="rateable-summary-tracklist">
+            <ul class="rateble-summary">
+              <li ng-bind="track.trackName" ng-repeat="track in tracklist"></li>
+            </ul>
+            <audio class="small-audio" controls></audio>
+          </div-->
+          <a class="itunes-badge" ng-href="{{summary.links[0].html}}" target="_system"></a>
+          
+        </section>
+        </div>
+           <fieldset id="rateable-view-actions">
+              <button id="rateable-view-rate" ng-click="rate()">
+                <output id="rateable-view-rating"><span ng-bind="details.rates[0]"></span><small>%</small></output>
+              </button>
+              <button id="rateable-view-social" ng-click="social()">
+                <output id="rateable-view-social-rate" ng-bind="details.social[0]"></output>
+                <output id="rateable-view-social-hate" ng-bind="details.social[1]"></output>
+              </button>
+              <button id="rateable-view-hate" ng-click="hate()">
+                <output id="rateable-view-hating"><span ng-bind="details.rates[1]"></span><small>%</small></output>
+              </button>
+            </fieldset>
+      </fieldset>
+    </fieldset>
+
+</form>
+
+
+</body>
+</html>

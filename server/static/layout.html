@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  html {
+  	margin: 0;
+  	padding: 0;
+  	min-width: 100%;
+  	min-height: 100%;
+  }
+  header#stylesheets {
+  	position: absolute;
+  	z-index: 1000;
+  	bottom: 0;
+  	right: 0;
+  }
+  header#stylesheets h1 {
+  	float: left;
+  }
+  body > div > section {
+  	outline: 1px solid red;
+  	border: 0px solid transparent;
+  }
+  html.landscape header h1:before {
+  	content: 'landscape';
+  	display: block;
+  }
+  html.portrait header h1:before {
+  	content: 'portrait';
+  	display: block;
+  }
+  </style>
+  <link  id="default-stylesheet" rel="stylesheet" href="css/default.css"></link>
+  <link disabled id="mobile-stylesheet" rel="stylesheet" href="css/mobile.css"></link>
+  <link disabled id="tablet-stylesheet" rel="stylesheet" href="css/tablet.css"></link>
+  <link disabled id="screen-stylesheet" rel="stylesheet" href="css/screen.css"></link>
+  <link disabled id="large-screen-stylesheet" rel="stylesheet" href="css/large-screen.css"></link>
+  <script>
+function swapCSS(value) {
+	if (!value) {
+		return
+	}
+	var stylesheets = ["mobile","tablet","screen","large-screen"],
+		elements = stylesheets.map(function (stylesheet) {
+			var element = document.getElementById(stylesheet+"-stylesheet");
+			return element
+		})
+	elements.forEach(function (element) {
+		if (element.id == value+"-stylesheet") {
+			element.disabled = false
+		} else {
+			element.disabled = true
+		}
+	})
+}
+
+function logResize() {
+	var computedStyle = getComputedStyle(document.documentElement);
+
+	var layout = "",
+		width = Math.min(Math.round(parseFloat(computedStyle.width),window.innerWidth)),
+		height = Math.min(Math.round(parseInt(computedStyle.height),window.innerHeight)),
+		orientation = width>height ? "landscape" : "portrait",//if it's square we'll go for portrait
+		size = orientation == "landscape" ? width : height,
+		inverse = orientation == "landscape" ? "portrait" : "landscape";
+	if (size<=500) {
+		layout = "mobile"
+	} else if (size<=800) {
+		layout = "tablet"
+	} else if (size<=1800) {
+		layout = "screen"
+	} else {
+		layout = "large-screen"
+	}
+	var classList = document.documentElement.classList;
+	var changeNeeded = !classList.contains(orientation);
+
+	if (changeNeeded) {
+		classList.remove(inverse)
+		classList.add(orientation);
+	}
+
+	swapCSS(layout)
+}
+
+
+window.onresize = logResize
+window.onload = logResize
+
+  </script>
+</head>
+
+
+<body>
+	<header id="stylesheets">
+		<h1>Layout</h1>
+		<select onchange="swapCSS(this.value)">
+			<option value="">global</option>
+			<option>mobile</option>
+			<option>tablet</option>
+			<option>screen</option>
+			<option>large-screen</option>
+		</select>
+		<button onclick="logResize()">Rz</button>
+	</header>
+
+	<div>
+		<section id="search">
+				<form>
+					<section id="search-toolbar">
+						<button>O</button>
+						<input/>
+						<button type="reset">x</button>
+						<button>?</button>
+					</section>
+					<section id="search-filter">
+						FILTER
+
+					</section>
+				</form>
+			<section id="search-results">
+				<table>
+					<tr>
+						<td>Search Results</td>
+						<td>Go here</td>
+					</tr>
+					<tr>
+						<td>Yup</td>
+						<td>Really</td>
+					</tr>
+					<tr>
+						<td>Another result</td>
+						<td>Can go here</td>
+					</tr>
+					<tr>
+						<td>And another</td>
+						<td>will go here</td>
+					</tr>
+					<tr>
+						<td>Can't be arsed</td>
+						<td>to do anymore results</td>
+					</tr>
+				</table>
+			</section>
+		</section>
+		<section id="card">
+			<section id="card-views">
+				<section id="card-title">
+					<h1>
+											Card Title
+										</h1>
+										<h2>
+											Sub title
+										</h2>
+				</section>
+				<section id="card-thumbnail">
+					THUMBNAIL
+				</section>
+				<section id="card-preview">
+					PREVIEW
+				</section>
+				<section id="card-additional">
+					ADDITIONAL
+				</section>
+			</section>
+			<section id="card-toolbar">
+				<section id="card-toolbar-primary">
+					PRIMARY
+				</section>
+				<section id="card-toolbar-secondary">
+					SECONDARY
+				</section>
+			</section>
+		</section>
+	</div>
+
+</body>
+</html>

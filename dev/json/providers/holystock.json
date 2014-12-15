@@ -1,0 +1,274 @@
+{
+  "BonusBucks": [
+    {
+      "celebId": "4678",
+      "price": 86000,
+      "expires": "2014-12-12 16:00:00",
+      "name": "Kathleen Turner"
+    },
+    {
+      "celebId": "9042",
+      "price": 85000,
+      "expires": "2014-12-12 14:00:00",
+      "name": "Justin Gaston"
+    },
+    {
+      "celebId": "3480",
+      "price": 52000,
+      "expires": "2014-12-12 17:00:00",
+      "name": "Jaason Simmons"
+    }
+  ],
+  "CelebrityValues": [
+    {
+      "celebId": "504",
+      "price": 1026000,
+      "name": "Angelina Jolie"
+    },
+    {
+      "celebId": "944",
+      "price": 791000,
+      "name": "Bill Cosby"
+    },
+    {
+      "celebId": "8536",
+      "price": 712000,
+      "name": "Taylor Swift"
+    },
+    {
+      "celebId": "4854",
+      "price": 668000,
+      "name": "Kim Kardashian"
+    },
+    {
+      "celebId": "7585",
+      "price": 385000,
+      "name": "Seth Rogen"
+    },
+    {
+      "celebId": "8889",
+      "price": 356000,
+      "name": "David Letterman"
+    },
+    {
+      "celebId": "6902",
+      "price": 354000,
+      "name": "Reese Witherspoon"
+    },
+    {
+      "celebId": "5580",
+      "price": 347000,
+      "name": "Mark Wahlberg"
+    },
+    {
+      "celebId": "431",
+      "price": 329000,
+      "name": "Amy Poehler"
+    },
+    {
+      "celebId": "9375",
+      "price": 304000,
+      "name": "Benedict Cumberbatch"
+    },
+    {
+      "celebId": "3907",
+      "price": 289000,
+      "name": "Jennifer Aniston"
+    },
+    {
+      "celebId": "1483",
+      "price": 287000,
+      "name": "Chris Rock"
+    },
+    {
+      "celebId": "9422",
+      "price": 285000,
+      "name": "Kevin Hart"
+    },
+    {
+      "celebId": "8559",
+      "price": 281000,
+      "name": "Justin Bieber"
+    },
+    {
+      "celebId": "4873",
+      "price": 278000,
+      "name": "Kirsten Dunst"
+    },
+    {
+      "celebId": "9298",
+      "price": 269000,
+      "name": "Stephen Colbert"
+    },
+    {
+      "celebId": "9396",
+      "price": 261000,
+      "name": "Ariana Grande"
+    },
+    {
+      "celebId": "6047",
+      "price": 256000,
+      "name": "Mila Kunis"
+    },
+    {
+      "celebId": "7797",
+      "price": 255000,
+      "name": "Steve Carell"
+    },
+    {
+      "celebId": "9362",
+      "price": 247000,
+      "name": "Kate Middleton"
+    },
+    {
+      "celebId": "3619",
+      "price": 247000,
+      "name": "James Franco"
+    },
+    {
+      "celebId": "4054",
+      "price": 246000,
+      "name": "Jimmy Fallon"
+    },
+    {
+      "celebId": "4725",
+      "price": 243000,
+      "name": "Keira Knightley"
+    },
+    {
+      "celebId": "3986",
+      "price": 242000,
+      "name": "Jesse Plemons"
+    },
+    {
+      "celebId": "9465",
+      "price": 242000,
+      "name": "Lena Dunham"
+    },
+    {
+      "celebId": "9185",
+      "price": 242000,
+      "name": "Nicki Minaj"
+    },
+    {
+      "celebId": "8554",
+      "price": 233000,
+      "name": "Rihanna"
+    },
+    {
+      "celebId": "1492",
+      "price": 231000,
+      "name": "Christian Bale"
+    },
+    {
+      "celebId": "8086",
+      "price": 219000,
+      "name": "Tina Fey"
+    },
+    {
+      "celebId": "4086",
+      "price": 215000,
+      "name": "Joan Rivers"
+    },
+    {
+      "celebId": "8528",
+      "price": 208000,
+      "name": "Barack Obama"
+    },
+    {
+      "celebId": "8553",
+      "price": 207000,
+      "name": "Beyonce"
+    },
+    {
+      "celebId": "8977",
+      "price": 199000,
+      "name": "J.J. Abrams"
+    },
+    {
+      "celebId": "4110",
+      "price": 196000,
+      "name": "Joaquin Phoenix"
+    },
+    {
+      "celebId": "1058",
+      "price": 196000,
+      "name": "Brad Pitt"
+    },
+    {
+      "celebId": "9525",
+      "price": 193000,
+      "name": "Amy Schumer"
+    },
+    {
+      "celebId": "4638",
+      "price": 191000,
+      "name": "Kate Beckinsale"
+    },
+    {
+      "celebId": "7569",
+      "price": 191000,
+      "name": "Selena Gomez"
+    },
+    {
+      "celebId": "4531",
+      "price": 189000,
+      "name": "Julianne Moore"
+    },
+    {
+      "celebId": "3953",
+      "price": 179000,
+      "name": "Jeremy Piven"
+    },
+    {
+      "celebId": "5931",
+      "price": 177000,
+      "name": "Michael Keaton"
+    },
+    {
+      "celebId": "8844",
+      "price": 169000,
+      "name": "Chris Brown"
+    },
+    {
+      "celebId": "6601",
+      "price": 165000,
+      "name": "Paula Patton"
+    },
+    {
+      "celebId": "9370",
+      "price": 161000,
+      "name": "Rebel Wilson"
+    },
+    {
+      "celebId": "9142",
+      "price": 159000,
+      "name": "Melissa Rivers"
+    },
+    {
+      "celebId": "9220",
+      "price": 158000,
+      "name": "Prince William"
+    },
+    {
+      "celebId": "5857",
+      "price": 155000,
+      "name": "Meryl Streep"
+    },
+    {
+      "celebId": "6687",
+      "price": 151000,
+      "name": "Peter Krause"
+    },
+    {
+      "celebId": "4644",
+      "price": 148000,
+      "name": "Kate Hudson"
+    },
+    {
+      "celebId": "2922",
+      "price": 147000,
+      "name": "George Clooney"
+    }
+  ]
+}

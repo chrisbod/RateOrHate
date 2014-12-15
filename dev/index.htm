@@ -4,7 +4,38 @@
 
 <head>
   <meta charset="utf-8">
+  <script>
+  var initial
+  function foo() {
+    document.documentElement.style.width = "100%"
+
+    var computedStyle = getComputedStyle(document.documentElement);
+    //console.log(computedStyle.fontSize)
+    console.log(window.getComputedStyle(document.documentElement).fontSize)
+
+    var layout = "",
+      width = Math.min(Math.round(parseFloat(computedStyle.width),window.innerWidth)),
+      height = Math.min(Math.round(parseInt(computedStyle.height),window.innerHeight));
+      
+    return {
+      width: width,
+      screenWidth: screen.width,
+      innerWidth: window.innerWidth,
+      nativeWidth: screen.width*devicePixelRatio,
+      nativeHeight:screen.height*devicePixelRatio,
+      ratio:(width/window.innerWidth)
+    }
+  }
+  var before = foo()
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+
+ var after =  foo()
+ console.log((381/2.54)*before.ratio/after.ratio)
+ //console.log(JSON.stringify(after))
+ //console.log(after)
+  </script>
   <title>Mess around</title>
   <link rel="stylesheet" href="css/typography.css"></link>
   <link rel="stylesheet" href="css/layout.css"></link>
@@ -13,6 +44,7 @@
   <script src="js/juicy/scroll.events.js"></script>
   <script src="js/rateableSelect.js"></script>
   <script src="js/services/itunes.js"></script>
+  <script src="js/services/cineworld.js"></script>
   <style>
     .pointer-highlight {outline: 1px solid red;}
   </style>
@@ -59,7 +91,6 @@
           </tr>
       </table>
       </div>
-    </div>
     <!--div class="result-meta">
             <span class="result-meta-1" ng-bind="result.meta[0]"></span>
             <span class="result-meta-2" ng-bind="result.meta[1]"></span>
@@ -76,84 +107,40 @@
   <fieldset id="rateable-view" ng-controller="RateableViewCtrl" load-state>
       
     <fieldset id="rateable-view-summary">
-      <h1>{{summary.name}}</h1>
-      <h2>{{summary.rateables.join(',')}}</h2>
-      <button ng-show="!details" ng-click="fetchDetails(summary)">View Details</button>
-      <div ng-show="details">
-        <span ng-bind="details.summary"></span>
+      <div class="rateable-view-summary-card">
+        <header class="rateable-summary-header">
+          <h1 ng-bind="summary.name[0]"></h1> 
+          <h2 ng-bind="summary.name[1]"></h2>
+        </header>
+        <section class="rateable-summary-snapshot">
+          <div class="rateable-summary-preview">
+            <img ng-src="{{summary.links[0].image}}" style="width:100%;height:100%">
+          </div>
+          <!--div class="rateable-summary-tracklist">
+            <ul class="rateble-summary">
+              <li ng-bind="track.trackName" ng-repeat="track in tracklist"></li>
+            </ul>
+            <audio class="small-audio" controls></audio>
+          </div-->
+          <a class="itunes-badge" ng-href="{{summary.links[0].html}}" target="_system"></a>
           
-      </div>
-      <fieldset id="rateable-view-actions" ng-disabled="!summary">
-            <fieldset>
-              <button ng-click="rate()">
-                <span>Rate<span>
-                <output ng-bind="details.ratings.rate"></output>
+        </section>
+        </div>
+           <fieldset id="rateable-view-actions">
+              <button id="rateable-view-rate" ng-click="rate()">
+                <output id="rateable-view-rating"><span ng-bind="details.rates[0]"></span><small>%</small></output>
               </button>
-              <button ng-click="hate()">
-                <span>Hate<span>
-                <output ng-bind="details.ratings.hate"></output>
+              <button id="rateable-view-social" ng-click="social()">
+                <output id="rateable-view-social-rate" ng-bind="details.social[0]"></output>
+                <output id="rateable-view-social-hate" ng-bind="details.social[1]"></output>
               </button>
-              <fieldset>
-              <label for="rateable-view-submenu-checkbox">More...</label>
-              <button>Favour it</button>
-              <button>Later it</button>
-              <button>Bin it</button>
+              <button id="rateable-view-hate" ng-click="hate()">
+                <output id="rateable-view-hating"><span ng-bind="details.rates[1]"></span><small>%</small></output>
+              </button>
             </fieldset>
-            </fieldset>
-            
-        </fieldset>
+      </fieldset>
     </fieldset>
-      
-  </fieldset>
-  <!--input type="checkbox" id="rateable-settings-checkbox">
-  <fieldset id="rateable-settings">
-      <label for="rateable-settings-checkbox">Settings</label>
-      <input type="checkbox" id="rateable-settings-general-checkbox">
-      <fieldset>
-        <label for="rateable-settings-general-checkbox">General</label>
-        <ul>
-            <li>
-              Rate your mates
-            </li>
-        </ul>
-      </fieldset>
-      <input type="checkbox" id="rateable-settings-profile-checkbox">
-      <fieldset>
-        <label for="rateable-settings-profile-checkbox">Profile</label>
-        <ul>
-            <li>
-             Profile
-            </li>
-        </ul>
-      </fieldset>
-      <input type="checkbox" id="rateable-settings-later-checkbox">
-      <fieldset>
-        <label for="rateable-settings-later-checkbox">Later</label>
-        <ul>
-            <li>
-             Later
-            </li>
-        </ul>
-      </fieldset>
-      <input type="checkbox" id="rateable-settings-rates-checkbox">
-      <fieldset>
-        <label for="rateable-settings-rates-checkbox">Rates</label>
-        <ul>
-            <li>
-              Rates
-            </li>
-        </ul>
-      </fieldset>
-      <input type="checkbox" id="rateable-settings-hates-checkbox">
-      <fieldset>
-        <label for="rateable-settings-rates-checkbox">Hates</label>
-        <ul>
-            <li>
-              Hates
-            </li>
-        </ul>
-      </fieldset>
-  </fieldset-->
+
 </form>
 
 

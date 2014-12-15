@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		fieldset {
+			border-width: 0;
+
+		}
+
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+		}
+		html {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			top:0;
+			overflow: hidden;
+		}
+		#app {
+			display: flex;
+			flex-wrap: wrap;
+			flex-grow: 1;
+			flex-direction: row;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			left: 0;
+			right:0;
+			bottom: 0;
+			top: 0;
+			overflow: auto;
+		}
+		#search {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: row;
+			overflow: visible;
+		}
+		#card {
+			flex-grow: 2;
+			display: flex;
+			flex-direction: column;
+			overflow: visible;	
+		}
+		#card-details {
+			flex-grow: 1;
+		}
+		#search-form {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			overflow: visible;
+		}
+		#search-filter {
+			flex-grow: 1;
+			overflow: auto;
+		}
+		#search-results {
+			flex-grow: 1;
+			overflow: auto;
+		}
+		#search-results-list {
+			flex-grow: 1;
+
+		}
+		#search-results-table {
+			min-width: 100%;
+		}
+		#search-toolbar {
+			display: flex;
+			justify-content: center;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+		button{
+			flex-shrink: 2;
+		}
+
+		#search-field {
+			flex-grow: 1;
+		}
+
+		#card-toolbar-primary,
+		#card-toolbar-secondary {
+			display:flex;
+			justify-content: center;
+		}
+		#card-toolbar-primary button,
+		#card-toolbar-secondary button {
+			flex-grow: 1;
+		}
+
+		
+
+		@media screen and (min-aspect-ratio: 5/4) { 
+			#search {
+				flex-direction: column;
+								max-width: 50%;
+			}
+			#search-form {
+				min-height: 40%;
+			}
+		}
+
+		@media screen and (max-aspect-ratio: 5/4) { 
+			#search {
+				width: 100%;
+				flex-grow: 1;
+				height: 40%;
+
+			}
+			#search-form {
+				flex-grow: 1;
+			}
+			#search-results {
+				flex-grow: 2;
+				min-width: 60%;
+			}
+			#card {
+				flex-grow: 2;
+				height: 60%;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			#search {
+				flex-direction: column;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+			}
+			#search-results {
+				width: auto;
+			}
+			#search-form{
+				width: 100%;
+				max-width: 100%;
+			}
+			#card {
+				min-height: 100%;
+				height: 100%;
+			}
+
+		}
+		
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<div id="app">
+		<section id="search">
+			<section id="search-form">
+				<section id="search-toolbar">
+						<button id="search-control">[]</button>
+						<input type="text" id="search-field">
+						<button type="reset" id="search-clear">-</button>
+						<button type="submit" id="search-submit">go</button>
+				</section>
+				<section id="search-filter">
+					<ul>
+						<li>A</li>
+						<li>B</li>
+						<li>C</li>
+						<li>D</li>
+						<li>E</li>
+						<li>F</li>
+
+						<li>A</li>
+						<li>B</li>
+						<li>C</li>
+						<li>D</li>
+						<li>E</li>
+						<li>F</li>
+						<li>A</li>
+						<li>B</li>
+						<li>C</li>
+						<li>D</li>
+						<li>E</li>
+						<li>F</li>
+						<li>A</li>
+						<li>B</li>
+						<li>C</li>
+						<li>D</li>
+						<li>E</li>
+						<li>F</li>
+						<li>A</li>
+						<li>B</li>
+						<li>C</li>
+						<li>D</li>
+						<li>E</li>
+						<li>F</li>
+					</ul>
+				</section>
+			</section>
+			<section id="search-results">
+				<section id="search-results-list">
+					<table id="search-results-table">
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Author</td>
+						</tr>
+					</table>
+				</section>
+				<section id="search-results-toolbar">
+
+				</section>
+			</section>
+		</section>
+		<section id="card">
+			<section id="card-details">
+				<section id="card-thumbnail">
+					THUMBNAIL
+				</section>
+				<section id="card-preview">
+					PREVIEW
+				</section>
+				<section id="card-meta">
+					META
+				</section>
+			</section>
+			<section id="card-toolbar">
+					<section id="card-toolbar-primary">
+						<button>RATE</button>
+						<button>SOCIAL</button>
+						<button>HATE</button>
+					</section>
+					<section id="card-toolbar-secondary">
+						<button>A</button>
+						<button>B</button>
+						<button>C</button>
+						<button>D</button>
+					</section>
+			</section>
+		</section>
+	</div>
+
+
+	</body>
+
+
+
+</html>

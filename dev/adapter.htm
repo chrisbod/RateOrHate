@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<script>
+
+		var input = {
+		  "resultCount": 1,
+		  "results": [
+		    {
+		      "wrapperType": "track",
+		      "kind": "song",
+		      "artistId": 159260351,
+		      "collectionId": 907104698,
+		      "trackId": 907106180,
+		      "artistName": "Taylor Swift",
+		      "collectionName": "1989 (Deluxe)",
+		      "trackName": "Blank Space",
+		      "collectionCensoredName": "1989 (Deluxe)",
+		      "trackCensoredName": "Blank Space",
+		      "artistViewUrl": "https:\/\/itunes.apple.com\/gb\/artist\/taylor-swift\/id159260351?uo=4",
+		      "collectionViewUrl": "https:\/\/itunes.apple.com\/gb\/album\/blank-space\/id907104698?i=907106180&uo=4",
+		      "trackViewUrl": "https:\/\/itunes.apple.com\/gb\/album\/blank-space\/id907104698?i=907106180&uo=4",
+		      "previewUrl": "http:\/\/a1826.phobos.apple.com\/us\/r2000\/009\/Music5\/v4\/9b\/01\/82\/9b018221-0c83-2e3b-b612-70b69d9240f0\/mzaf_4472060732031922349.plus.aac.p.m4a",
+		      "artworkUrl30": "http:\/\/a1.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.30x30-50.jpg",
+		      "artworkUrl60": "http:\/\/a3.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.60x60-50.jpg",
+		      "artworkUrl100": "http:\/\/a2.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.100x100-75.jpg",
+		      "collectionPrice": 10.99,
+		      "trackPrice": 0.99,
+		      "releaseDate": "2014-01-01T08:00:00Z",
+		      "collectionExplicitness": "notExplicit",
+		      "trackExplicitness": "notExplicit",
+		      "discCount": 1,
+		      "discNumber": 1,
+		      "trackCount": 19,
+		      "trackNumber": 2,
+		      "trackTimeMillis": 231833,
+		      "country": "GBR",
+		      "currency": "GBP",
+		      "primaryGenreName": "Pop"
+		    }
+		  ]
+		};
+
+		var output = [ {
+				id: "itunes:track:907106180",//"'itunes:track:'+o.trackId",
+				collectiveName: "Taylor Swift", //"o.artistName",
+				itemName: "Blank Space",//"o.trackName",
+				image:  "http:\/\/a2.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.200x200-75.jpg",//"o.artworkUrl100.replace('100x100','200x200')",
+				html: "https:\/\/itunes.apple.com\/gb\/album\/blank-space\/id907104698?i=907106180&uo=4",//"o.trackViewUrl",
+				preview: "http:\/\/a1826.phobos.apple.com\/us\/r2000\/009\/Music5\/v4\/9b\/01\/82\/9b018221-0c83-2e3b-b612-70b69d9240f0\/mzaf_4472060732031922349.plus.aac.p.m4a",
+				allArtwork: [
+
+"http:\/\/a1.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.30x30-50.jpg",
+"http:\/\/a3.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.60x60-50.jpg",
+"http:\/\/a2.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.100x100-75.jpg"
+				],
+				anotherArtwork: [
+
+"http:\/\/a1.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.30x30-50.jpg",
+"http:\/\/a3.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.60x60-50.jpg",
+"http:\/\/a2.mzstatic.com\/us\/r30\/Music3\/v4\/d6\/c4\/fa\/d6c4fa34-af7c-362e-10a1-c4881d550370\/14UMGIM34830.100x100-75.jpg"
+				]
+			}
+		];
+
+
+			function Adapter(config) {
+				this.adapterFunction = this.buildAdapter(config);
+
+			}
+			Adapter.prototype = {
+				adapt: function (input) {
+
+					var output = [];
+					input.results.forEach(
+						function (value) {
+							output.push(this.adaptObject(value,input.results))
+						}, this
+					)
+						
+					return output;
+				},
+				buildAdapter: function (config,parents) {
+					var lines = ["var n = {}"];
+					for (var i in config) {
+						switch (typeof config[i]) {
+							case "string": {
+								lines.push("n['"+i+"'] = "+config[i]);
+								break;
+							}
+						}
+					}
+					lines.push("return n");
+					return new Function ("o","r",lines.join(";"))
+				},
+				adaptObject: function (track) {
+					return this.adapterFunction(track)
+				}
+
+			}
+
+			var config = {
+				id: "'itunes:track:'+o.trackId",
+				collectiveName: "o.artistName",
+				itemName: "o.trackName",
+				image: "o.artworkUrl100.replace('100x100','200x200')",
+				html: "o.trackViewUrl",
+				preview: "o.previewUrl",
+				allArtwork: "[o.artworkUrl30,o.artworkUrl60,o.artworkUrl100]",
+				anotherArtwork: [
+					"o.artworkUrl30",
+					"o.artworkUrl60",
+					"o.artworkUrl100"
+				]
+			}
+
+			var sillyConfig = {
+				"r.results" : 
+						{
+						id: "'itunes:track:'+o.trackId",
+						collectiveName: "o.artistName",
+						itemName: "o.trackName",
+						image: "o.artworkUrl100.replace('100x100','200x200')",
+						html: "o.trackViewUrl",
+						preview: "o.previewUrl",
+						allArtwork: "[o.artworkUrl30,o.artworkUrl60,o.artworkUrl100]",
+						anotherArtwork: [
+							"o.artworkUrl30",
+							"o.artworkUrl60",
+							"o.artworkUrl100"
+						]
+					}
+				};
+		
+
+
+			var adapter = new Adapter(config)
+			var actualOutput = adapter.adapt(input)
+			var desiredObject = output[0],
+				producedObject = actualOutput[0];
+			for (var prop in desiredObject) {
+				if (JSON.stringify(producedObject[prop])!==JSON.stringify(desiredObject[prop])) {
+					console.log ("FAIL:" + prop)
+				} else {
+					console.log("SUCCESS:"+prop)
+				}
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+
+	</body>
+
+
+
+</html>

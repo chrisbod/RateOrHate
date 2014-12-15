@@ -1,0 +1,41 @@
+header h1:after {
+	content: 'widescreen';
+	display: block;
+	font-size: 12px;
+}
+
+
+#search{
+
+}
+#search-form{
+
+}
+#search-results{
+
+}
+#card{
+
+}
+#card-views{
+
+}
+#card-thumbnail{
+
+
+}
+#card-preview{
+
+}
+#card-additional{
+
+}
+#card-toolbar{
+	
+}
+#card-toolbar-primary{
+
+}
+#card-toolbar-secondary{
+
+}

@@ -1,0 +1,43 @@
+<html>
+	<head>
+
+
+	</head>
+
+
+	<body>
+		<script src="js/vendor/q.js">
+		</script>
+		<script src="js/services/dataservice.js">
+		</script>
+		<script>
+		onload = function () {
+			var service = new DataService(),
+				deferred = Q.defer();
+				deferred.promise.done(
+					function (data,bata) {
+						console.log("success")
+					}
+				,function (error) {
+					console.log(error.validMimeType)
+				},function () {
+					console.log("progress")
+				})
+			
+			service.request("http://www.google.com",deferred)
+			service.request("json/results.json1", function (data) {
+				console.log(data)
+			}, function (error) {
+				console.log(error.resolveUrl())
+			})
+
+		}
+
+
+		</script>
+
+	</body>
+
+
+
+</html>

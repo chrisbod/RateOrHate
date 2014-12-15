@@ -1,0 +1,56 @@
+<html>
+
+	<body>
+
+		<style>
+			div {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				outline: 1px solid red;
+				width: 200px;
+				height: 200px;
+				overflow-y: auto;
+				
+			}
+			span {
+				outline: 1px solid red;
+				display: flex;
+				flex: 1 1 10%;
+				min-width: 10ex;
+				min-height: 10ex;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/*when there are only two elements to display do it vertically*/
+			span:nth-child(1):nth-last-child(2),
+			span:nth-child(2):nth-last-child(1)
+			 {
+				min-width:100%
+			}
+
+
+		</style>
+		<div>
+			<span>A</span>
+
+			<span>B</span>
+
+			<span>C</span>
+			<!--span>D</span>
+			<span>E</span>
+				<span>C</span>
+			<span>D</span>
+			<span>E</span>
+			<span>F</span>
+			<span>G</span-->
+		</div>
+
+
+	</body>
+
+
+
+</html>

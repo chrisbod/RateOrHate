@@ -214,11 +214,11 @@ fieldset:not([disabled]) label.small-icon {
 
 form > fieldset {
 	max-width: 21em;
-	min-height: 12em;
+	height: 28em;
 }
 form > fieldset#rateable-search {
 	width: 100%;
-	min-height: inherit;
+	height: initial;
 }
 /*form > fieldset {
 	position: fixed;
@@ -262,6 +262,7 @@ form > fieldset#rateable-search {
 	border-color: rgba(0%,0%,100%,0.2);
 	border-radius: 1em;
 	border-width: 0.2em;
+	height: 30em;
 }
 
 #rateable-results ul {
@@ -296,18 +297,197 @@ form > fieldset#rateable-search {
 	overflow: hidden;
 }
 #rateable-results .result-name td:first-child {
-	border-radius: 1ex 0 0 1ex;
 	padding-left: 1ex;
 
 }
-#rateable-results .result-name td:last-child {
-	border-radius: 0 1ex 1ex 0;
 
-}
 #rateable-results .result-name.selected .result-name-primary,
 #rateable-results .result-name.selected .result-name-secondary {
 	background-color: rgba(0, 0, 255, 0.2);
 	color: white;
 	border-bottom-color: transparent;
 }
+
+
+
+
+#rateable-view-summary {
+	background-color: rgb(222,222,222);
+	border-radius: 1ex;
+	margin: 1ex;
+
+}
+
+.rateable-summary-header {
+	text-align: center;
+	margin-bottom: 1ex;
+}
+.rateable-summary-header h1, .rateable-summary-header h2 {
+	margin: 0;
+	padding:0;
+	font-size: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width:100%;
+	max-width:100%;
+}
+.rateable-view-summary-card {
+	background-color: white;
+	margin: 1em;
+	padding: 1em;
+	width: 17em;
+}
+#rateable-view-actions {
+	margin: 1em;
+	height: 5em;
+	text-align: center;
+}
+#rateable-view-actions button {
+	border-width: 0;
+	background-color: white;
+	border-radius: 100%;
+	box-sizing: border-box;
+	width: 5em;
+	height: 5em;
+	overflow: visible;
+	position: absolute;
+}
+
+#rateable-view-actions output small {
+	font-size: 70%;
+
+}
+
+#rateable-view-actions button#rateable-view-rate {
+	left: 0;
+	top: 0;
+}
+#rateable-view-actions button#rateable-view-hate {
+	top: 0;
+	right: 0;
+}
+#rateable-view-actions button#rateable-view-social {
+	background-color: transparent;
+	position: relative;
+	width: 16ex;
+	height: 100%;
+	background-size: 6ex;
+	background-image: url(../img/icons/controls/social.svg);
+	background-repeat: no-repeat;
+	border-radius: 0;
+	background-position: center;
+	bottom:-1em;
+
+}
+#rateable-view-social output {
+	position: absolute;
+	bottom: 0;
+	font-size: 2.5ex;
+
+}
+
+#rateable-view-social-rate {
+
+	right: 63%;
+}
+#rateable-view-social-hate {
+
+	left: 63%;
+}
+
+
+
+#rateable-view-rating,
+#rateable-view-hating {
+	position: absolute;
+	width: 100%;
+	height: 120%;
+	background-repeat: no-repeat;
+	left: 0;
+	background-position: center;
+	background-size: 80%;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	box-sizing: border-box;
+
+}
+#rateable-view-rating {
+	background-image: url(../img/icons/controls/thumb-up.svg);
+	top: -25%;
+	padding-top: 89%;
+	padding-left: 4%;
+}
+#rateable-view-hating {
+	background-image: url(../img/icons/controls/thumb-down.svg);
+	top: 5%;
+	padding-top: 43%;
+	padding-left: 18%;
+}
+.rateable-view-summary-card output {
+	font-weight: bold;
+}
+
+
+.rateable-summary-snapshot {
+	height: 17em;
+	width: 17em;
+	margin: auto;
+
+}
+.rateable-summary-snapshot a.itunes-badge {
+	position: absolute;
+	left: 50%;
+	margin-left: -55px;
+	bottom: 10ex;
+}
+
+
+/*temporary layout*/
+
+
+#rateable-results {
+	position: absolute;
+	left: 22em;
+	top: 0;
+	width: 21em;
+}
+
+#rateable-view {
+	position: absolute;
+	left: 44em;
+	top: 0;
+	width: 21em;
+}
+
+
+.itunes-badge {
+	width: 110px;
+	height: 40px;
+	background-image: url(../img/vendor/itunes/Available_on_iTunes_Badge_US-UK_110x40_0801.svg);
+}
+a.itunes-badge {
+	display: inline-block;
+}
+.rateable-summary-tracklist {
+	height: 100%;
+	background-color: grey;
+	border-radius: 1ex;
+
+}
+.small-audio {
+	display: block;
+	height: 1em;
+	position: absolute;
+	bottom: 8em;
+	left: 2em;
+	width: 17em;
+}
+
+audio::-webkit-media-controls-play-button {
+	color: red
+}
+
+
 

@@ -1,0 +1,51 @@
+header h1:after {
+	content: 'tablet';
+	display: block;
+	font-size: 12px;
+}
+
+.portrait #search{
+	top: 0;
+	left: 0;
+	overflow: visible;
+}
+.portrait #search-form{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 10%;
+
+}
+.portrait #search-results{
+	top: 10%;
+	left: 0;
+	right: 50%;
+	bottom: 0;
+}
+.portrait #card {
+	left: 50%;
+	
+}
+#card-views{
+
+}
+#card-thumbnail{
+
+
+}
+#card-preview{
+
+}
+#card-additional{
+
+}
+#card-toolbar{
+	
+}
+#card-toolbar-primary{
+
+}
+#card-toolbar-secondary{
+
+}

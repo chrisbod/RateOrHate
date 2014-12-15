@@ -89,22 +89,41 @@ rateableSelect.controller('RateableSearchResultsCtrl', function ($scope,$rootSco
 rateableSelect.controller('RateableViewCtrl', function ($scope,$rootScope,rateableDetailsService) {
 	$scope.loadState = "";
 	$scope.details = null;
+	$scope.tracklist = null;
 	$rootScope.$on("rateable.change", function () {
 		$scope.loadState = "empty";
 		$scope.details = null;
 		$scope.summary = null;
+		$scope.tracklist = null;
 		
 	});
 	$rootScope.$on("rateable.select", function (event, rateable) {	
 		$scope.summary = rateable;
+		$scope.fetchRatings();
+		$scope.fetchTracklist();
 	})
-	$scope.fetchDetails = function () {
+	$scope.fetchRatings = function () {
 		$scope.loadState = "loading";
-		rateableDetailsService.fetchDetails($scope.summary).success(
+		rateableDetailsService.fetchRatings($scope.summary).success(
 			function (details) {
 				$scope.details = details;
 				$scope.loadState = "loaded";
-
+				if (!$scope.$$phase) {//imported results have not been hashed
+						$scope.$apply()
+					}
+			}
+		)
+		
+	}
+	$scope.fetchTracklist = function () {
+		$scope.loadState = "loading";
+		rateableDetailsService.fetchTracklist($scope.summary).success(
+			function (tracklist) {
+				$scope.tracklist = tracklist;
+				$scope.loadState = "loaded";
+				if (!$scope.$$phase) {//imported results have not been hashed
+						$scope.$apply()
+					}
 			}
 		)
 	}
@@ -183,23 +202,11 @@ rateableSelect.factory('rateablesSearchService', function ($http) {
 		search: function (searchDetails) {
 			if (searchDetails.rateable.id == "music") {
 
-				var psuedoPromise = {
-					callbacks: [function (data) {
-						rateablesSearchService.results = data.results;
-					}],
-					success: function (callback) {
-						this.callbacks.push(callback)
-					},
-					resolve: function (data) {
-						this.callbacks.forEach(function (value) {
-							value(data)
-						})
-					}
-				} 
+				var promise = new PseudoPromise();
 				new ITunesRequestService().request(function (data) {
-					psuedoPromise.resolve(data);
+					promise.resolve(data);
 				},"music",searchDetails.searchTerm);
-				return psuedoPromise;
+				return promise;
 			} else {
 				return $http.get('json/searchResults.json?searchTerm='+searchDetails.searchTerm+'&rateable='+searchDetails.rateable.id).success(function(data) {
 					rateablesSearchService.results = data;
@@ -210,18 +217,40 @@ rateableSelect.factory('rateablesSearchService', function ($http) {
 	return rateablesSearchService;
 });
 
-rateableSelect.factory('rateableDetailsService', function ($http) {
+rateableSelect.factory('rateableDetailsService', function () {
+	var detailsService = new ITunesDetailsService(),
+		tracklistService = new ITunesTracklistService()
 	var rateableDetailsService = {
 		details: {},
-		fetchDetails: function (rateable) {
-			return $http.get('json/'+rateable.id+'.json').success(
+		tracklist: {},
+		fetchRatings: function (rateable) {
+
+			var promise = new PseudoPromise();
+			promise.success(function (data) {
+				detailsService.details = data;
+			})
+			detailsService.fetch(
 			function (data) {
-				rateableDetailsService.details = data;
-			});
+				promise.resolve(data)
+			},rateable.id);
+			return promise;
+		},
+		fetchTracklist: function (rateable) {
+
+			var promise = new PseudoPromise();
+			promise.success(function (data) {
+				tracklistService.tracklist = data;
+			})
+			tracklistService.fetch(
+			function (data) {
+				promise.resolve(data)
+			},rateable.id);
+			return promise;
 		}
 	}
 	return rateableDetailsService;
 });
+
 
 
 

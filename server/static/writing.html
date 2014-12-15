@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+
+	<style>
+
+	div {
+		margin: 10px;
+		border: 1px solid red;
+		width: 20%;
+		height: 4em;
+	}
+	span {
+		display: inline-block;
+		white-space: nowrap;
+		margin: 2px;
+		border: 1px solid red;
+	}
+
+	div.reverse-order {
+
+		
+		-ms-writing-mode: tb-rl; /* old syntax. IE */
+		-webkit-writing-mode: vertical-rl;
+		-moz-writing-mode: vertical-rl; /*doesn't work */
+		-ms-writing-mode: vertical-rl;
+		writing-mode: vertical-rl; /* new syntax */
+		*writing-mode: tb-rl; /*ie-8 etc*/
+
+
+	}
+	div.vertical-order {
+		
+		-ms-writing-mode: rl-tb; /* old syntax. IE */
+		-webkit-writing-mode: vertical-lr;
+		-moz-writing-mode: vertical-lr; /*doesn't work */
+		-ms-writing-mode: vertical-lr;
+		writing-mode: vertical-lr; /* new syntax */
+		writing-mode: rl-tb;
+	}
+	div span {
+		
+		-ms-writing-mode: lr-tb; /* old syntax. IE */
+		-webkit-writing-mode: horizontal-tb;
+		-moz-writing-mode: horizontal-tb; /*doesn't work */
+		-ms-writing-mode: horizontal-tb;
+		writing-mode: horizontal-tb; /* new syntax */#
+		writing-mode: lr-tb;
+	}
+	div.float span {
+		float: left;
+	}
+
+
+	</style>
+
+	</head>
+
+
+	<body>
+		<div>
+			<span>A 1</span>
+			<span>B 2</span>
+			<span>C 3</span>
+			<span>D 4</span>
+			<span>E 5</span>
+			<span>F 6</span>
+		</div>
+
+
+		<div class="vertical-order">
+			<span>A 1</span>
+			<span>B 2</span>
+			<span>C 3</span>
+			<span>D 4</span>
+			<span>E 5</span>
+			<span>F 6</span>
+		</div>
+
+		<div class="vertical-order float">
+			<span>A 1</span>
+			<span>B 2</span>
+			<span>C 3</span>
+			<span>D 4</span>
+			<span>E 5</span>
+			<span>F 6</span>
+		</div>
+		<div class="reverse-order">
+			<span>A 1</span>
+			<span>B 2</span>
+			<span>C 3</span>
+			<span>D 4</span>
+			<span>E 5</span>
+			<span>F 6</span>
+		</div>
+
+		<div class="reverse-order float">
+			<span>A 1</span>
+			<span>B 2</span>
+			<span>C 3</span>
+			<span>D 4</span>
+			<span>E 5</span>
+			<span>F 6</span>
+		</div>
+
+
+
+
+	</body>
+
+
+
+</html>
