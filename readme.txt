@@ -1,1 +1,1 @@
-Fun little experiment with Angular using Geolocation, a nodejs server and plenty of web services to provide data on local restaurants etc
+Fun little experiment with Angular using Geolocation, a nodejs server and plenty of web services to provide data on local restaurants etc - ugly bulk commits I'm afraid (long story)
