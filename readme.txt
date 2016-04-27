@@ -1,0 +1,1 @@
+Fun little experiment with Angular using Geolocation, a nodejs server and plenty of web services to provide data on local restaurants etc

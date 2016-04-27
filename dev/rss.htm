@@ -1,12 +1,12 @@
 <html>
 <head>
-	<script src="js/vendor/moment-with-locales.min.js"></script>
+	<!--script src="js/vendor/moment-with-locales.min.js"></script-->
 	<script>
-
+	onsload = function () {
 	var x = new XMLHttpRequest();
-	x.open("GET","http://feeds.bbci.co.uk/news/business/rss.xml")
+	x.open("GET","http://www.faroo.com/api?q=ye+cracke&start=1&length=10&l=en&src=news&f=json&key=cwzakMT4Nx9kI02oyyDUQDcQfjg_");
 	x.onload = function () {
-		var items = this.responseXML.querySelectorAll("item"),
+		/*var items = this.responseXML.querySelectorAll("item"),
 			news = [];
 		[].forEach.apply(items, [function (itemNode) {
 			var images = itemNode.querySelectorAll("thumbnail")
@@ -18,16 +18,66 @@
 				text: itemNode.querySelector("description").textContent
 
 			})
-		}])
-		console.log(news)
+		}])*/
+		document.getElementById("foo").innerHTML = (this.responseText)
+	}
+	x.onerror = function () {
+		console.log(arguments)
 	}
 	x.send();
+}
+
+var json = {
+	foo: {
+		zoo: [1,2,3,{boo:"boo",og:[1,2,{"noo":1}]}]
+	}
+}
+
+Object.prototype.iterate = function (stack,func,scope) {
+	if (this.constructor == Object) {
+		var obj = this,
+			newStack = [this].concat(stack);
+		Object.keys(this).forEach(function (key) {
+			var value = obj[key]
+			func.call(scope||obj,value,key,obj,stack);
+			if (typeof value == "object") {
+				value.iterate(newStack,func,scope)
+			}
+		})
+	}
+}
+Array.prototype.iterate = function (stack,func,scope) {
+	var obj = this,
+		newStack = stack.concat()
+	newStack.unshift(this)
+
+	this.forEach(function (value,key,array) {
+		func.call(scope||obj,value,key,array,stack);
+		if (typeof value == "object") {
+
+			value.iterate(newStack,func,scope)
+		}
+	})
+}
+
+
+
+var foo = [1,2,3,4,5,6,7],
+	ugly = {ugly:"ugly"}
+
+
+json.iterate([],function (value,key,object,stack){
+	console.log(stack)
+	
+
+})
+
 
 
 	</script>
 </head>
 <body>
-
+<div id="foo"></foo>
 
 
 

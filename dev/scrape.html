@@ -1,0 +1,31 @@
+<html>
+	<head>
+
+	<script>
+	var x = new XMLHttpRequest();
+	x.open("GET","http://www.londonstockexchange.com/exchange/prices-and-markets/stocks/risers-and-fallers/risers-fallers.html")
+	x.setRequestHeader("Access-Control-Allow-Origin","*");
+	x.onload = function () {
+		var foo = document.createElement("html")
+		foo.innerHTML = this.responseText.replace(/<(\/?)(link|style|script|img)/gim,"<$1ignore")
+		var tables = foo.querySelectorAll("tbody tr");
+		[].forEach.apply(tables,[function(tr) {
+			document.getElementById("shit").appendChild(tr)
+		}])
+	}
+	x.send();
+	
+
+	</script>
+	</head>
+	<body>
+		<table>
+			<tbody id="shit">
+
+
+			</tbody>
+		</table>
+
+	</body>
+
+</html>

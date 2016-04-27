@@ -15,20 +15,11 @@ ITunesResultsConverter.prototype = {
 	mapFeedEntry: function (entry) {
 		return {
 			id: "itunesSong:"+this.hash.count++,
-			name: [entry["im:name"].label,entry["im:artist"].label],
-			meta: [entry.category.attributes.label],
-			links: [{
-				provider: "itunes",
-				html: entry.link[0].attributes.href,
-				image: entry["im:image"][1].label,
-	
-				preview: entry.link[1].attributes.href
-			}
-
-
-
-			]
-
+			title: entry["im:name"].label,
+			subtitle: entry["im:artist"].label,
+			html:entry.link[0].attributes.href,
+			image: entry["im:image"][1].label,
+			preview: entry.link[1].attributes.href
 		}
 	},
 	convertSearch: function (data) {
@@ -39,17 +30,13 @@ ITunesResultsConverter.prototype = {
 	},
 	mapSearchResults: function (result) {
 		return {
-			id: "itunesSong:"+this.hash.count++,
-			name: [result.trackName||result.collectionName,result.artistName],
-			meta: [result.primaryGenreName],
-			links: [{
-				provider: "itunes",
-				html: result.collectionViewUrl,
-				preview: result.previewUrl,
-				image: result.artworkUrl100.replace('100x100','200x200')
-			}
+			id: result.collectionId,
+			title: result.collectionName,
+			subtitle: result.artistName,
+			html: result.collectionViewUrl,
+			preview: result.previewUrl,
+			image: result.artworkUrl100.replace('100x100','200x200'),
 
-			]
 		}
 
 	}

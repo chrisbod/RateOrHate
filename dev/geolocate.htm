@@ -4,16 +4,42 @@
 
 
 		</script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
 		<script src="js/tools/geolocator.js"></script>
+		<script src="js/services/dataservice.js"></script>
+		<script src="js/services/factual.js"></script>
 
 		<script>
-		var geolocator = new GeoLocator();
-		geolocator.fetchCoordinates().done(console.log.bind(console),console.log.bind(console,"fail coords"))
-      //geolocator.fetchCountryCode().done(console.log.bind(console))
+
+		var geolocator = new GeoLocator(),
+			factualService = new FactualService()
+		geolocator.requestCountryCode().done(function (code) {
+			geolocator.requestPostalCodeArea().done(function (postalCode) {
+				factualService.request(code,postalCode).done(console.log.bind(console));
+			})
+		})
+
+		function getFirst(results) {
+			var container = document.createElement("div"),
+				mapContainer = document.createElement("div");
+				container.appendChild(mapContainer);
+			var firstResults = results[0].results[0];
+			var service = new google.maps.places.PlacesService(mapContainer);
+				service.textSearch({query:firstResults.name+" "+firstResults.postcode}, console.log.bind(console));
+			
+
+		}
+
+		/*
+		geolocator.requestLocation().done(console.log.bind(console),console.log.bind(console,"fail coords"))
+      	geolocator.requestCountryCode().done(console.log.bind(console))
+      	geolocator.requestPostalCodeArea().done(console.log.bind(console))*/
 
 
 
-      geolocator.fetchCountryCode().done(console.log.bind(console),console.log.bind(console,"fail"))
+
+
+     // geolocator.fetchCountryCode().done(console.log.bind(console),console.log.bind(console,"fail"))
       
 //geolocator.getLanguage()
 

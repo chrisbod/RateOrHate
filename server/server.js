@@ -2,8 +2,9 @@ var express = require('express')
 var app = express();
 var bodyParser = require('body-parser'),
 	querystring = require('querystring'),
-	itunes = require('./data/itunes.music.json')
-	ITunesService = require('./services/music.itunes.js')
+	itunes = require('./data/itunes.music.json'),
+	Factual = require('factual-api'),
+	factual = new Factual('n2PWmug7pLICciMqVCRrfl5UGaa0rGDRnPYS86hh', 'Whb10nrg8YwElMEP0mUaDE8HD4cvYDRY9R97cUHs');
 
 
 
@@ -68,6 +69,18 @@ app.get(/^\/Search\/Music/, function (request,response) {
 		response.sendStatus(404)
 	}
 });
+
+app.get('/factual/*', function (request, response){
+	var paths = request.path.split('/'),
+		country = paths[2].toLowerCase(),
+		postcode = paths[3],
+		business = paths[4]||"restaurant";
+		//http://api.v3.factual.com/t/restaurants-gb/[factual_id]?select=[field names]&q=[search terms]&geo=[geo filter]&filters=[row filter]&threshold=[confident|default|comprehensive]&offset=[offset]&limit=[limit]&include_count=[true/false]&sort=[column:asc/desc|blending JSON]
+		factual.get('/t/restaurants-gb',{limit: 50,sort: {"placerank":100},select:"name,website,postcode,cuisine,latitude,longitude,tel,rating",filters:{postcode:{"$bw":postcode}}}, function (error, res) {
+  		response.json(res)
+  		//
+});
+})
 
 
 

@@ -18,18 +18,18 @@ fieldset > *::-webkit-scrollbar {
 fieldset > *::-webkit-scrollbar-thumb:vertical {
   margin: 5px;
   background-color: #999;
-  -webkit-border-radius: 5px;
+  opacity: 0.5;
+  -webkit-border-radius: 2px;
 }
 fieldset > *::-webkit-scrollbar-thumb:horizontal {
   margin: 5px;
   background-color: #999;
-  -webkit-border-radius: 5px;
+  opacity: 0.5;
+  -webkit-sborder-radius: 2px;
 }
  
-fieldset > *::-webkit-scrollbar-button:start:decrement,
-fieldset > *::-webkit-scrollbar-button:end:increment {
-  height: 5px;
-  display: block;
+fieldset > *::-webkit-scrollbar-button {
+  display: none;
 }
 h1,h2,h3,h4,h5,p {
 	-webkit-user-select: initial;
@@ -69,7 +69,7 @@ input[form="visual"] + label {
 input[form="visual"]:checked + label {
 	opacity: .8;
 	background-color: rgba(0%,0%,100%,0.2);
-	border-radius: 1em;
+	sborder-radius: 1em;
 }
 
 input, select, textarea, label, button {
@@ -79,8 +79,8 @@ input, select, textarea, label, button {
 	height: 2em;
 	box-sizing: content-box;
 	margin: 0em;
-	border-width: 0.2em;
-	border-radius: 0.2em;
+	border-width: 0;
+	sborder-radius: 0.2em;
 	border-style:solid;
 	border-color: rgba(0%,0%,100%,0.2);
 	padding: 0.2em 0.8em;
@@ -97,7 +97,7 @@ fieldset[disabled] input {
 	border-color: rgba(0%,0%,0%,0.1);
 }
 button {
-	background-color: rgba(0%,0%,100%,0.2);
+	background-color: rgba(0%,0%,100%,0);
 	min-width: 2ex;
 	font-weight: bold;
 
@@ -136,10 +136,10 @@ legend.underlay {
 
 div.overflow {
 position: absolute;
-top: 1ex;
-left: 1ex;
-right: 1ex;
-bottom: 1ex;
+top: 0;
+left:0;
+right:0;
+bottom: 4ex;
 overflow: auto;
 
 }
@@ -212,11 +212,11 @@ fieldset:not([disabled]) label.small-icon {
 }
 
 
-form > fieldset {
+div > fieldset {
 	max-width: 21em;
 	height: 28em;
 }
-form > fieldset#rateable-search {
+div > fieldset#rateable-search {
 	width: 100%;
 	height: initial;
 }
@@ -259,10 +259,10 @@ form > fieldset#rateable-search {
 }
 
 #rateable-results {
-	border-color: rgba(0%,0%,100%,0.2);
-	border-radius: 1em;
-	border-width: 0.2em;
-	height: 30em;
+	sborder-color: rgba(0%,0%,100%,0.2);
+	sborder-radius: 1em;
+	sborder-width: 0.2em;
+	height: 27em;
 }
 
 #rateable-results ul {
@@ -308,14 +308,34 @@ form > fieldset#rateable-search {
 	border-bottom-color: transparent;
 }
 
+#rateable-results-provider {
+	position: absolute;
+	height: 2em;
+	left: 1ex;
+	right: 1ex;
+	bottom: 0;
+	text-align: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+#rateable-results-provider .provider {
+	display: inline-block;
+	flex: 1 1 5em;
+	height: 100%;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#rateable-results-provider .provider.google {
+	background-image: url(../img/vendor/google/android/res/drawable-xhdpi/powered-by-google-on-white.png);
+}
 
 
 
 #rateable-view-summary {
-	background-color: rgb(222,222,222);
-	border-radius: 1ex;
-	margin: 1ex;
-
+	sbackground-color: rgb(222,222,222);
+	sborder-radius: 1ex;
 }
 
 .rateable-summary-header {
@@ -345,8 +365,8 @@ form > fieldset#rateable-search {
 }
 #rateable-view-actions button {
 	border-width: 0;
-	background-color: white;
-	border-radius: 100%;
+	background-color: transparent;
+	sborder-radius: 100%;
 	box-sizing: border-box;
 	width: 5em;
 	height: 5em;
@@ -375,7 +395,7 @@ form > fieldset#rateable-search {
 	background-size: 6ex;
 	background-image: url(../img/icons/controls/social.svg);
 	background-repeat: no-repeat;
-	border-radius: 0;
+	sborder-radius: 0;
 	background-position: center;
 	bottom:-1em;
 
@@ -473,7 +493,7 @@ a.itunes-badge {
 .rateable-summary-tracklist {
 	height: 100%;
 	background-color: grey;
-	border-radius: 1ex;
+	sborder-radius: 1ex;
 
 }
 .small-audio {
@@ -489,5 +509,14 @@ audio::-webkit-media-controls-play-button {
 	color: red
 }
 
+
+#google-map {
+	position: absolute;
+top: 9ex;
+left: 2em;
+right: 2em;
+bottom: 20ex;
+visibility: hidden;
+}
 
 

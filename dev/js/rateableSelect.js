@@ -1,3 +1,21 @@
+(function (success, fail) {
+	var deferred = Q.defer(),
+		prototype = deferred.promise.constructor.prototype;
+	prototype.success = success;
+	prototype.fail = fail;
+
+
+})(
+	function (func) {
+		return this.then(func);
+	},
+	function (func) {
+		return this.catch(func);
+	}
+
+)
+
+
 var rateableSelect = angular.module('rateableSelect', []).config(['$locationProvider', function($locationProvider) {
          $locationProvider.html5Mode({
   enabled: true,
@@ -8,16 +26,47 @@ var rateableSelect = angular.module('rateableSelect', []).config(['$locationProv
 rateableSelect.controller('RateableSelectCtrl', function ($scope,$rootScope,rateablesService) {
 	$scope.legend = "RATE OR HATE";
 	$scope.loadState = "loading";
+	$scope.rateable = null;
+	$scope.rateables = null;
+	$scope.rootRateable = null;
 	rateablesService.getRateables().success(
-		function (rateables) {
+		function (rateable) {
 			$scope.loadState = "loaded";
-
-    		$scope.rateables = rateables;
+    		$scope.rateables = rateable.rateables;
+    		$scope.rateable = rateable;
+    		$scope.rootRateable = rateable;
 		}
 	);
 	$rootScope.$on("rateable.change", function (event,rateable) {
-		$scope.rateable = rateable
+		$scope.rateable = rateable;
+
+		$scope.rateables = rateable.rateables||$scope.rateables;
+		$scope.parentRateable = rateable||getParent(rateable)
 	})
+	$rootScope.$on("rateable.up", function (event,rateable) {
+		var parent = getParent(rateable);
+		if (parent.rateables == $scope.rateables) {//att the bottom level
+			parent = getParent(parent);
+		}
+		$rootScope.$broadcast("rateable.change",parent);
+	})
+
+	function getParent(rateable) {
+		var path = rateable.path.split('/'),
+			root = $scope.rootRateable,
+			currentRateable = root;
+		path.pop();
+		while (currentRateable.rateables && path.length) {
+			var currentId = path.pop();
+			for (var i=0,rateables=currentRateable.rateables;i!=rateables.length;i++) {
+				if (rateables[i].id== currentId) {
+					currentRateable = rateables[i];
+					break;
+				}
+			}
+		}
+		return currentRateable;
+	}
   $scope.changeRateable = function (rateable) {
   	$rootScope.$broadcast("rateable.change",rateable)
   }
@@ -26,7 +75,8 @@ rateableSelect.controller('RateableSelectCtrl', function ($scope,$rootScope,rate
 
 rateableSelect.controller('RateableSearchCtrl', function ($scope,$rootScope) {
 	$rootScope.$on("rateable.change", function (event,rateable) {
-		$scope.rateable = rateable
+		$scope.rateable = rateable;
+		$scope.search();
 	});
 	$scope.searchTerm = "";
 	$scope.search = function () {
@@ -37,8 +87,8 @@ rateableSelect.controller('RateableSearchCtrl', function ($scope,$rootScope) {
 			})
 		//}
 	}
-	$scope.changeRateable = function (rateable) {
-  		$rootScope.$broadcast("rateable.change",null)
+	$scope.parent = function () {
+  		$rootScope.$broadcast("rateable.up",$scope.rateable)
   }
 });
 
@@ -57,28 +107,27 @@ rateableSelect.controller('RateableSearchResultsCtrl', function ($scope,$rootSco
 
 	});
 	$rootScope.$on("rateable.search", function (event,details) {
-		if (details.searchTerm != currentSearchTerm) {
+		if (details.searchTerm !== currentSearchTerm) {
 			currentSearchTerm = details.searchTerm;
 			$scope.loadState = "loading"
 			$scope.details = details;
 			$scope.results = null;
-			if (details.searchTerm) {
-				currentPromise = rateablesSearchService.search(details);
-				currentPromise.success(function (data) {
-					currentPromise = void 0;
-					if (data.results.length) {
-						$scope.loadState = "loaded"
-					} else {
-						$scope.loadState = "loaded empty"
-					}
-					
-					$scope.results = data.results;
+			currentPromise = rateablesSearchService.search(details);
+			currentPromise.success(function (data) {
+				currentPromise = void 0;
+				if (data.results.length) {
+					$scope.loadState = "loaded"
+				} else {
+					$scope.loadState = "loaded empty"
+				}
+				$scope.providers = data.providers;
+				$scope.results = data.results;
 					if (!$scope.$$phase) {//imported results have not been hashed
 						$scope.$apply()
 					}
+				if (data.results.length) $scope.rate(data.results[0])
 				});
 			}
-		}
 	})
 	$scope.rate = function (result) {
 		$scope.selectedId = result.id;
@@ -179,14 +228,19 @@ rateableSelect.directive('jcStyle', function () {
 })
 
 rateableSelect.factory('rateablesService', function ($http) {
+	function buildPaths(rateable,path) {
+		path = rateable.path = path||rateable.id;
+		if (rateable.rateables) {
+			rateable.rateables.forEach(function (rateable) {
+				buildPaths(rateable,path+'/'+rateable.id)
+			})
+		}
+	}
 	var rateablesService = {
 		rateables: [],
 		getRateables: function () {
 			return $http.get('json/rateables.json').success(function(data) {
-				data.forEach(function (value) {
-				value.className = value.id.toLowerCase().replace(/\W/g,'_');
-			})
-				rateablesService.rateables = data;
+				rateablesService.rateables = buildPaths(data);
 		  	});
 		}
 	}
@@ -200,17 +254,34 @@ rateableSelect.factory('rateablesSearchService', function ($http) {
 		results: [],
 		
 		search: function (searchDetails) {
-			if (searchDetails.rateable.id == "music") {
+			var rateableId = searchDetails.rateable.id;
 
-				var promise = new PseudoPromise();
-				new ITunesRequestService().request(function (data) {
-					promise.resolve(data);
-				},"music",searchDetails.searchTerm);
-				return promise;
-			} else {
-				return $http.get('json/searchResults.json?searchTerm='+searchDetails.searchTerm+'&rateable='+searchDetails.rateable.id).success(function(data) {
-					rateablesSearchService.results = data;
-		  		});
+
+
+			if (searchDetails.rateable.type == "place") {
+					var promise = new PseudoPromise();	
+					new PlacesService().request(searchDetails).done(function(data) {
+							promise.resolve(data);
+					});
+					return promise;
+
+
+			}
+			switch (rateableId) {
+				case "music": {
+					var promise = new PseudoPromise();
+					new ITunesRequestService().request(function (data) {
+						promise.resolve(data);
+					},"music",searchDetails.searchTerm);
+					return promise;
+				}
+				default: {
+					return $http.get('json/searchResults.json?searchTerm='+searchDetails.searchTerm+'&rateable='+searchDetails.rateable.id).success(function(data) {
+							rateablesSearchService.results = data;
+					});
+
+				}
+
 			}
 		}
 	}
@@ -250,6 +321,7 @@ rateableSelect.factory('rateableDetailsService', function () {
 	}
 	return rateableDetailsService;
 });
+
 
 
 

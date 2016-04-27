@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>Mess around</title>
+ <script>
+
+ function EventListener() {
+ }
+EventListener.mixin = function (object) {
+  for (var i in this.prototype) {
+    object[i] = this.prototype[i];
+  }
+}
+EventListener.prototype = {
+  _eventListener_listeners: null,
+  _eventListener_supported: null,
+  getListenersByType: function (type) {
+    if (this._eventListener_supported && !this._eventListener_supported[type]) {
+      throw new Error("Unsupported event type: "+ type);
+    }
+    if (!this._eventListener_listeners) {
+      this._eventListener_listeners = {};
+      this._eventListener_listeners[type] = [];
+    }
+    return this._eventListener_listeners[type];
+  },
+  addEventListener: function (type,listener) {
+    var listeners = this.getListenersByType(type);
+    if (listeners.indexOf(listener) == -1) {
+      listeners.push(listener);
+      return true;
+    }
+    return false;
+  },
+  removeEventListener: function (type,listener) {
+    var listeners = this.getListenersByType(type),
+      index = listeners.indexOf(listener);
+    if (index == -1) {
+      return false;
+    }
+    listeners.splice(index,1);
+    return true;
+  },
+  dispatchEvent: function (event) {
+    var listeners = this.getListenersByType(event.type);
+    listeners.forEach(function (value) {
+      if (typeof value == "object") {
+        value.handleEvent(event)
+      } else {
+        value(event)
+      }
+    })
+  }
+
+
+}
+
+
+
+function Quick() {
+
+}
+Quick.defer = function () {
+  return new this.Deferred()
+}
+
+Quick.Deferred = function () {
+  this.promise = new Quick.Promise()
+}
+Quick.Deferred.prototype = {
+  resolve: function (data) {
+    this.promise._resolve(data);  
+  },
+  reject: function (reason) {
+    this.promise._reject(reason);
+  },
+  notify: function (details) {
+    this.promise._notify(details);
+  },
+  cancel: function (details) {
+    this.promise._cancel(details)
+  }
+
+}
+
+Quick.Promise = function Quick_Promise(resolver, extensions) {
+  if (resolver) {
+    resolver(this._resolve.bind(this),this._reject.bind(this))
+  }
+  if (extensions) {
+    extensions(this._notify.bind(this),this._cancel.bind(this))
+  }
+}
+Quick.Promise.prototype = {
+  _promiseHandlers: null,
+  pending: true,
+  resolved: false,
+  cancelled: false,
+  fulfilled: false,
+  rejected: false,
+  complete: false,
+  handlers: function QuickPromise_handlers(name) {
+    return (this._promiseHandlers || this._promiseHandlers = {})[name] || allHandlers[name] = [];
+  },
+  success: function Quick_Promise_success(handler) {
+    return this.then(handler)
+  },
+  fail: function QuickPromise_fail(handler) {
+    return this.then(null,handler)
+  },
+  failure: function QuickPromise_fail(handler) {
+    return this.then(null,handler)
+  },
+  then: function QuickPromise_then(successHandler,failureHandler,progressHandler,cancelHandler) {
+    var promise = this;
+    var returnPromise = new this.constructor();
+    if (successHandler) {
+      this.handlers("resolve").push(this._chain.bind(this,returnPromise,"resolve",successHandler));
+    }
+    if (failureHandler) {
+      this.handlers("reject").push(this._chain.bind(this,returnPromise,"reject",failureHandler));
+    }
+    if (progressHandler) {
+      this.handlers("notify").push(this._chain.bind(this,returnPromise,"notify",failureHandler))
+    }
+    if (cancelHandler) {
+      this.handlers("cancel").push(this._chain.bind(this,returnPromise,"cancel",failureHandler);
+    }
+    return returnPromise;
+    
+  },
+  _chain: function (promise,action,handler,data) {
+    var result = handler(data);
+            if (result === void 0) {
+              result = data;
+            }
+          promise["_"+action](result);
+  },
+  _cancel: function QuickPromise_cancel(reason) {
+    this.cancelled = this.complete = true;
+    this.pending = false;
+    this.handlers("failure").forEach(function (value) {
+      value(reason)
+    })
+    this.dispatchEvent({
+      type: "cancel",
+      details: {
+        reason: reason
+      }
+    });
+  },
+  timeout: function (handler) {
+
+  },
+  progress: function QuickPromise_progress(progressHandler) {
+    this.then(null,null,progressHandler);
+  },
+  _notify: function QuickPromise_notify(details) {
+    this.handlers("progress").forEach(function (value) {
+      value(details||null)
+    })
+    this.dispatchEvent("progress", {type:"progress",details:details||{}})
+  },
+  _resolve: function QuickPromise_resolve(data) {
+    if (!this.complete) {
+      this.complete = this.resolved = this.fulfilled = true;
+      this.pending = false;
+      var handlers = this.handlers("success")
+      handlers.forEach(function (value) {
+        value(data)
+      });
+      handlers.length = 0;
+      handlers.push = function (handler) {
+        handler(data)
+      }
+      this.handlers("failure").push = function(){};
+    } else {
+      throw new Error("Promsie already complete");
+    }
+  },
+  _reject: function QuickPromise_reject(reason) {
+    if (!this.complete) {
+      this.complete = this.rejected = true;
+      this.pending = false;
+      var handlers = this.handlers("success")
+      handlers.forEach(function (value) {
+        value(data)
+      });
+      handlers.length = 0;
+      handlers.push = function (handler) {
+        handler(reason)
+      }
+      this.handlers("success").push = function () {};
+    } else {
+      throw new Error("Promise already complete")
+    }
+  }
+}
+EventListener.mixin(Quick.Promise.prototype)
+  </script>
+</head>
+<body>
+
+
+</div>
+
+
+</body>
+</html>

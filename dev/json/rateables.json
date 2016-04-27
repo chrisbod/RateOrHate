@@ -1,26 +1,31 @@
-[
-  {
-    "name":"Somewhere",
-    "id":"somewhere",
-    "provider": "maps",
-    "rateables": [
-      {"name":"Food","id":"food"},
-      {"name":"Bars","id":"bars"},
-      {"name":"Cafes","id":"cafes"},
-      {"name":"Shops","id":"shops"},
-      {"name":"Clubs","id":"clubs"}
-    ]
-  },
-  {
-    "name": "Something",
-    "id":"something",
-    "rateables": [
-      {"name":"Music","id":"music","dataProvider":"amazon"},
-      {"name":"Clothing","id":"clothing"},
-      {"name":"Games","id":"games"},
-      {"name":"Apps","id":"apps"},
-      {"name":"Gadgets","id":"gadgets"}
-    ]
+{
+"name": "Rate or Hate",
+"id": "rateorhate",
+"rateables" : 
+  [
+    {
+      "name":"Somewhere",
+      "id":"somewhere",
+      "provider": "maps",
+      "rateables": [
+        {"name":"Restaurants","id": "restaurants", "google":"restaurant","type": "place"},
+        {"name":"Bars","id":"bars","google":"bar","type": "place"},
+        {"name":"Cafes","id":"cafes", "google":"cafe","type": "place"},
+        {"name":"Shops","id":"shops", "google":"store","type": "place"},
+        {"name":"Clubs", "id":"clubs","google":"night_club","type": "place"}
+      ]
+    },
+    {
+      "name": "Something",
+      "id":"something",
+      "rateables": [
+        {"name":"Music","id":"music","dataProvider":"amazon"},
+        {"name":"Clothing","id":"clothing"},
+        {"name":"Games","id":"games"},
+        {"name":"Apps","id":"apps"},
+        {"name":"Gadgets","id":"gadgets"}
+      ]
 
-  }
-]
+    }
+  ]
+}
